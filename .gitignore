@@ -3,3 +3,9 @@
 /obj
 /bin
 /*.user
+/app/*.js
+/app/*.js.map
+/app/**/*.js
+/app/**/*.map.js
+node_modules
+typings
