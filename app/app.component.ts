@@ -1,7 +1,12 @@
 ﻿import { Component } from '@angular/core';
+import {OverviewComponent} from './overview/overview.component';
+import {ItemService} from './services/item.service';
+
 @Component({
     selector: 'testApp',
-    template: '<h1>My First Angular 2 App</h1>'
+    directives: [OverviewComponent],
+    templateUrl: 'app/app.component.html',
+    providers: [ItemService]
 })
 
 export class AppComponent { } 
