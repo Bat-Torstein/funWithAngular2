@@ -1,16 +1,17 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { ItemService} from '../services/item.service'
 import { Item} from '../models/item'
+import { ListItemComponent} from './listitem.component';
 
 @Component({
     moduleId: module.id,
     selector: 'list',
-    templateUrl: 'list.component.html'
+    templateUrl: 'list.component.html',
+    directives: [ListItemComponent]
 })
 
 export class ListComponent implements OnInit {
     items: Item[];
-    selectedItem: Item
 
     constructor(
         private _itemService: ItemService) { }
@@ -21,9 +22,5 @@ export class ListComponent implements OnInit {
 
     ngOnInit() {
         this.getItems();
-    }
-
-    onSelect(item: Item) {
-        this.selectedItem = item;
     }
 } 

@@ -1,1 +1,11 @@
-﻿<span>This be a list item detaaails</span>
+﻿<span class="glyphicon" [class.glyphicon-plus] = "canOpen()"  [class.glyphicon-minus] = "canClose()" (click)="onClick()">{{item.name}}</span>
+<div *ngIf = "open">
+    <ul>
+        <li *ngFor = "let child of item.children">
+            <list-item [item]="child"></list-item>
+        </li>
+    </ul>
+</div>
+
+
+

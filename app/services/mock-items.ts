@@ -1,13 +1,38 @@
 ﻿import { Item } from '../models/item';
 
 export var ITEMS: Item[] = [
-    { 'id': 11, 'name': 'Ein' },
-    { 'id': 12, 'name': 'To' },
-    { 'id': 13, 'name': 'Tre' },
-    { 'id': 14, 'name': 'Mordi' },
-    { 'id': 15, 'name': 'Fardin' },
-    { 'id': 16, 'name': 'Sju' },
-    { 'id': 17, 'name': 'Ått' },
-    { 'id': 18, 'name': 'Ni' },
-    { 'id': 19, 'name': 'Ti' },
+    {
+        'id': 1,
+        'name': 'A - Level 1',
+        children:
+        [{
+            'id': 11,
+            'name': 'A - Level 2-1',
+            children: []
+        },
+            {
+                'id': 12,
+                'name': 'A - Level 2-2',
+                children:
+                [
+                    { 'id': 111, name: 'A - Level 3', children: [] }
+                ]
+            }
+        ]
+    },
+    {
+        'id': 2,
+        'name': 'B - Level 1',
+        children: []
+    },
+    {
+        'id': 3,
+        'name': 'C - Level 1',
+        children:
+        [{
+            'id': 31,
+            'name': 'C - Level 2',
+            children: []
+        }]
+    }
 ];
