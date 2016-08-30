@@ -1,5 +1,6 @@
-﻿import { Component, Input } from '@angular/core';
+﻿import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { Item } from '../models/item';
+import { TreeSelector } from '../models/treeSelector';
 
 @Component({
     moduleId: module.id,
@@ -8,7 +9,8 @@ import { Item } from '../models/item';
 })
 
 export class ListItemComponent {
-    @Input() item : Item;
+    @Input() item: Item;
+    @Input() treeselector: TreeSelector;
     open: boolean;
 
     constructor() {
@@ -23,9 +25,18 @@ export class ListItemComponent {
         return this.item.children && this.item.children.length && this.open;
     }
 
-    onClick() {
+    isSelected() {
+        return this.treeselector.isSelected(this.item.id);
+    }
+
+    onClick(event: MouseEvent) {
         if (this.item.children && this.item.children.length) {
             this.open = !this.open;
+        }
+        if (event.ctrlKey) {
+            this.treeselector.multiSelect(this.item);
+        } else {
+            this.treeselector.singleSelect(this.item);
         }
     }
 } 

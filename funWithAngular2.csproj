@@ -96,7 +96,9 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\common\maptoiterable.ts" />
     <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\models\treeselector.ts" />
     <TypeScriptCompile Include="app\overview\overview.component.ts" />
     <TypeScriptCompile Include="app\services\item.service.ts" />
     <TypeScriptCompile Include="app\list\listitem.component.ts" />

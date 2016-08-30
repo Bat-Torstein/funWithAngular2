@@ -1,5 +1,12 @@
 ﻿<ul>
     <li *ngFor = "let item of items">
-        <list-item [item] ="item"></list-item>
+        <list-item [item] ="item" [treeselector]="treeselector"></list-item>
+    </li>
+</ul>
+
+<h4>Selected items:</h4>
+<ul>
+    <li *ngFor = "let item of treeselector.selectedItems | mapToIterable">
+        {{item.name}}
     </li>
 </ul>
