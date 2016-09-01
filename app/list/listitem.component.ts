@@ -7,7 +7,6 @@ import { TreeSelector } from './treeselector';
     selector: 'list-item',
     templateUrl: 'listitem.component.html'
 })
-
 export class ListItemComponent {
     @Input() item: Item;
     open: boolean;

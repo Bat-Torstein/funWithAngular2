@@ -6,7 +6,6 @@ import { TreeSelector} from '../list/treeselector';
 import { MapToIterablePipe} from '../common/maptoiterable';
 import * as _ from 'underscore';
 
-
 @Component({
     moduleId: module.id,
     selector: 'list',
@@ -15,7 +14,6 @@ import * as _ from 'underscore';
     directives: [ListItemComponent],
     pipes: [MapToIterablePipe]
 })
-
 export class ListComponent implements OnInit {
     items: Item[];
 
