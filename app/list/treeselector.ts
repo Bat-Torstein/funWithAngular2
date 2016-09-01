@@ -1,5 +1,7 @@
-﻿import {Item} from './item';
+﻿import {Injectable} from '@angular/core';
+import {Item} from '../models/item';
 
+@Injectable()
 export class TreeSelector {
     selectedItems: { [id: number]: Item } = {};
 

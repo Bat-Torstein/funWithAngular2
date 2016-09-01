@@ -2,7 +2,7 @@
 import { ItemService} from '../services/item.service'
 import { Item} from '../models/item'
 import { ListItemComponent} from './listitem.component';
-import { TreeSelector} from '../models/treeselector';
+import { TreeSelector} from '../list/treeselector';
 import { MapToIterablePipe} from '../common/maptoiterable';
 import * as _ from 'underscore';
 
@@ -11,16 +11,15 @@ import * as _ from 'underscore';
     moduleId: module.id,
     selector: 'list',
     templateUrl: 'list.component.html',
+    providers: [TreeSelector],
     directives: [ListItemComponent],
     pipes: [MapToIterablePipe]
 })
 
 export class ListComponent implements OnInit {
     items: Item[];
-    treeselector: TreeSelector;
 
-    constructor(private itemService: ItemService) {
-        this.treeselector = new TreeSelector();
+    constructor(private itemService: ItemService, private treeSelector : TreeSelector) {
     }
 
     getItems() {
