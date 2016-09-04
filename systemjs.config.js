@@ -6,9 +6,9 @@
     // map tells the System loader where to look for things
     var map = {
         'app': 'app', // 'dist',
-        '@angular': 'app/node_modules/@angular',
-        'rxjs': 'app/node_modules/rxjs',
-        'underscore': 'app/node_modules/underscore/underscore.js'
+        '@angular': 'node_modules/@angular',
+        'rxjs': 'node_modules/rxjs',
+        'underscore': 'node_modules/underscore/underscore.js'
     };
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
