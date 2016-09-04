@@ -1,4 +1,4 @@
-﻿import {TestComponentBuilder,inject, ComponentFixture} from '@angular/core/testing';
+﻿import {inject, ComponentFixture} from '@angular/core/testing';
 import {ListItemComponent} from '../../app/list/listitem.component';
 import {TreeSelector} from '../../app/list/treeselector';
 import {Item} from '../../app/models/item';

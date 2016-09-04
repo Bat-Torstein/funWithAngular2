@@ -1,9 +1,7 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { ItemService} from '../services/item.service'
 import { Item} from '../models/item'
-import { ListItemComponent} from './listitem.component';
 import { TreeSelector} from '../list/treeselector';
-import { MapToIterablePipe} from '../common/maptoiterable';
 import { FormsModule } from '@angular/forms';
 import * as _ from 'underscore';
 
@@ -12,8 +10,6 @@ import * as _ from 'underscore';
     selector: 'list',
     templateUrl: 'list.component.html',
     providers: [TreeSelector],
-    directives: [ListItemComponent],
-    pipes: [MapToIterablePipe]
 })
 export class ListComponent implements OnInit {
     textValue: string;

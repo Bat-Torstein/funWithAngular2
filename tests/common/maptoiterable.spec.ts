@@ -1,7 +1,7 @@
 ﻿import {MapToIterablePipe} from '../../app/common/maptoiterable';
 import {TestBed} from '@angular/core/testing';
 
-describe('Pipe: MapToiIerable', () => {
+describe('Pipe: MapToIterable', () => {
     let pipe: MapToIterablePipe;
 
     beforeEach(() => {

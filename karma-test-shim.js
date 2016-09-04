@@ -31,38 +31,30 @@ System.config({
 
 System.config(
 {
+    paths: {
+       'npm:' : 'node_modules/'
+    },
     map: {
-        'rxjs': 'node_modules/rxjs',
-        '@angular': 'node_modules/@angular',
-        'underscore' : 'node_modules/underscore/underscore.js'
+        '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
+        '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
+        '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
+        '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
+        '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+        '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+
+        // angular testing umd bundles
+        '@angular/core/testing': 'npm:@angular/core/bundles/core-testing.umd.js',
+        '@angular/common/testing': 'npm:@angular/common/bundles/common-testing.umd.js',
+        '@angular/compiler/testing': 'npm:@angular/compiler/bundles/compiler-testing.umd.js',
+        '@angular/platform-browser/testing': 'npm:@angular/platform-browser/bundles/platform-browser-testing.umd.js',
+        '@angular/platform-browser-dynamic/testing': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
+
+        // other libraries
+        'rxjs': 'npm:rxjs',
+        'underscore': 'npm:underscore/underscore.js',
     },
     packages: {
         'app': {
-            main: 'main.js',
-            defaultExtension: 'js'
-        },
-        '@angular/core': {
-            main: 'index.js',
-            defaultExtension: 'js'
-        },
-        '@angular/compiler': {
-            main: 'index.js',
-            defaultExtension: 'js'
-        },
-        '@angular/common': {
-            main: 'index.js',
-            defaultExtension: 'js'
-        },
-        '@angular/platform-browser': {
-            main: 'index.js',
-            defaultExtension: 'js'
-        },
-        '@angular/forms': {
-            main: 'index.js',
-            defaultExtension: 'js'
-        },
-        '@angular/platform-browser-dynamic': {
-            main: 'index.js',
             defaultExtension: 'js'
         },
         'rxjs': {
@@ -80,6 +72,7 @@ Promise.all([
 ]).then(function (providers) {
     var testing = providers[0];
     var testingBrowser = providers[1];
+
     testing.TestBed.initTestEnvironment(testingBrowser.BrowserDynamicTestingModule,
       testingBrowser.platformBrowserDynamicTesting());
     
