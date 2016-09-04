@@ -3,6 +3,7 @@ import {ListComponent} from '../../app/list/list.component';
 import {Item} from '../../app/models/item';
 import {ItemService} from '../../app/services/item.service';
 import {TreeSelector} from '../../app/list/treeselector';
+import {FormsModule} from '@angular/forms';
 
 class MockItemService extends ItemService {
     getItems() {
@@ -20,8 +21,9 @@ describe('ListComponent', () => {
         TestBed.configureTestingModule({
             declarations: [ListComponent],
             providers: [
-                {provide: ItemService, useClass: MockItemService}
-            ]
+                { provide: ItemService, useClass: MockItemService }
+            ],
+            imports: [FormsModule]
         });
         TestBed.compileComponents();
     }));

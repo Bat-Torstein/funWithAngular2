@@ -4,6 +4,7 @@ import { Item} from '../models/item'
 import { ListItemComponent} from './listitem.component';
 import { TreeSelector} from '../list/treeselector';
 import { MapToIterablePipe} from '../common/maptoiterable';
+import { FormsModule } from '@angular/forms';
 import * as _ from 'underscore';
 
 @Component({
@@ -15,6 +16,7 @@ import * as _ from 'underscore';
     pipes: [MapToIterablePipe]
 })
 export class ListComponent implements OnInit {
+    textValue: string;
     items: Item[];
 
     constructor(private itemService: ItemService, private treeSelector : TreeSelector) {
@@ -27,5 +29,9 @@ export class ListComponent implements OnInit {
     ngOnInit() {
         this.getItems();
         var test = _.random(0, 100);
+    }
+
+    upperText() {
+        this.textValue = this.textValue.toUpperCase();
     }
 } 

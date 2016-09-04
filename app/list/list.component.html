@@ -1,4 +1,6 @@
-﻿<ul>
+﻿<input #testInput [(ngModel)]="textValue" (keyup.enter) ="upperText()" />
+<span>{{testInput.value}}</span>
+<ul>
     <li *ngFor = "let item of items">
         <list-item [item] ="item"></list-item>
     </li>

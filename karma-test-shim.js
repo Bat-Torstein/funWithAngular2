@@ -57,6 +57,10 @@ System.config(
             main: 'index.js',
             defaultExtension: 'js'
         },
+        '@angular/forms': {
+            main: 'index.js',
+            defaultExtension: 'js'
+        },
         '@angular/platform-browser-dynamic': {
             main: 'index.js',
             defaultExtension: 'js'
