@@ -9,8 +9,7 @@ describe('TreeSelector', () => {
     });
 
     it('should add item to selected list when single selecting', () => {
-        let item = new Item();
-        item.id = 1;
+        let item = new Item(1, "name");
 
         treeSelector.singleSelect(item);
 
@@ -18,10 +17,8 @@ describe('TreeSelector', () => {
     });
 
     it('should only have one item in list when single-selecting', () => {
-        let item1 = new Item();
-        item1.id = 1;
-        let item2 = new Item();
-        item2.id = 2;
+        let item1 = new Item(1, "name");
+        let item2 = new Item(2, "name");
 
         treeSelector.singleSelect(item1);
         treeSelector.singleSelect(item2);
@@ -30,8 +27,7 @@ describe('TreeSelector', () => {
     });
 
     it('should add item to selected list when multi-selecting', () => {
-        let item = new Item();
-        item.id = 1;
+        let item = new Item(1, "name");
 
         treeSelector.multiSelect(item);
 
@@ -39,10 +35,8 @@ describe('TreeSelector', () => {
     });
 
     it('should add multiple items to selected list when multi-selecting', () => {
-        let item1 = new Item();
-        item1.id = 1;
-        let item2 = new Item();
-        item2.id = 2;
+        let item1 = new Item(1, "name");
+        let item2 = new Item(2, "name");
 
         treeSelector.multiSelect(item1);
         treeSelector.multiSelect(item2);
@@ -51,9 +45,8 @@ describe('TreeSelector', () => {
     });
 
     it('should remove selected item from list when deselecting', () => {
-        let item = new Item();
-        item.id = 1;
-
+        let item = new Item(1, "name");
+        
         treeSelector.multiSelect(item);
         treeSelector.multiSelect(item);
 
@@ -61,8 +54,7 @@ describe('TreeSelector', () => {
     });
 
     it('should regard item as selected when it is in the selected list', () => {
-        let item = new Item();
-        item.id = 1;
+        let item = new Item(1, "name");
 
         treeSelector.singleSelect(item);
 
@@ -70,10 +62,8 @@ describe('TreeSelector', () => {
     });
 
     it('should not regard item as selected when it is not in the selected list', () => {
-        let item1 = new Item();
-        item1.id = 1;
-        let item2 = new Item();
-        item1.id = 2;
+        let item1 = new Item(1, "name");
+        let item2 = new Item(2, "name");
 
         treeSelector.singleSelect(item2);
 

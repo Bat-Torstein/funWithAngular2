@@ -6,12 +6,10 @@ import {Item} from '../../app/models/item';
 describe('ListItemComponent', () => {
     let listItemComponent: ListItemComponent;
     let treeSelector: TreeSelector;
-    let itemWithChildren = new Item();
-    itemWithChildren.id = 1;
+    let itemWithChildren = new Item(1, "withChildren");
     itemWithChildren.children = [];
-    itemWithChildren.children.push(new Item());
-    let itemWithNoChildren = new Item();
-    itemWithChildren.id = 2;
+    itemWithChildren.children.push(new Item(11, "child"));
+    let itemWithNoChildren = new Item(2, "nochildren");
 
     beforeEach(() => {
         treeSelector = new TreeSelector();
@@ -26,7 +24,7 @@ describe('ListItemComponent', () => {
     });
 
     it('can not open when already open', () => {
-        listItemComponent.item = new Item();
+        listItemComponent.item = new Item(1, "name");
         listItemComponent.open = true;
 
         expect(listItemComponent.canOpen()).toBeFalsy();
@@ -61,17 +59,15 @@ describe('ListItemComponent', () => {
     });
 
     it('is selected when treeSelector contains item in selected list', () => {
-        listItemComponent.item = new Item();
-        listItemComponent.item.id = 1;
+        listItemComponent.item = new Item(1, "name");
         treeSelector.singleSelect(listItemComponent.item);
 
         expect(listItemComponent.isSelected()).toBeTruthy();
     });
 
     it('is not selected when treeSelector contains other items', () => {
-        listItemComponent.item = new Item();
-        listItemComponent.item.id = 1;
-
+        listItemComponent.item = new Item(1, "name");
+        
         expect(listItemComponent.isSelected()).toBeFalsy();
     });
 }); 

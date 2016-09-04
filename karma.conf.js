@@ -33,6 +33,8 @@
           { pattern: 'node_modules/@angular/**/*.js', included: false, watched: true },
           { pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: true },
 
+          { pattern: 'node_modules/underscore/**/*.js', included: false, watched: true },
+
           // Our built application code
           { pattern: 'app/**/*.js', included: false, watched: true },
           // Our built application code

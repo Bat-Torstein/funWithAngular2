@@ -8,8 +8,7 @@
         'app': 'app', // 'dist',
         '@angular': 'app/node_modules/@angular',
         'rxjs': 'app/node_modules/rxjs',
-        'underscore': 'app/node_modules/underscore/underscore.js',
-        'toastr': 'app/node_modules/toastr/toastr.js'
+        'underscore': 'app/node_modules/underscore/underscore.js'
     };
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {

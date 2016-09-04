@@ -33,7 +33,8 @@ System.config(
 {
     map: {
         'rxjs': 'node_modules/rxjs',
-        '@angular': 'node_modules/@angular'
+        '@angular': 'node_modules/@angular',
+        'underscore' : 'node_modules/underscore/underscore.js'
     },
     packages: {
         'app': {
@@ -61,6 +62,9 @@ System.config(
             defaultExtension: 'js'
         },
         'rxjs': {
+            defaultExtension: 'js'
+        },
+        'underscore': {
             defaultExtension: 'js'
         }
     }
