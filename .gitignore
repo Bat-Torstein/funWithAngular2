@@ -3,15 +3,7 @@
 /obj
 /bin
 /*.user
-/app/*.js
-/app/*.js.map
-/app/**/*.js
-/app/**/*js.map
-!/app/systemjs.config.js
-/tests/*.js
-/tests/*.js.map
-/tests/**/*.js
-/tests/**/*js.map
+/dist
 node_modules
 typings
 /report

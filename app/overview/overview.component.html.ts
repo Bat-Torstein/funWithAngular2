@@ -1,4 +1,6 @@
-﻿<div class="col-md-3">
+﻿export const htmlTemplate = `
+
+<div class="col-md-3" >
     <list></list>
 </div>
 <div class="col-md-9">
@@ -19,3 +21,5 @@
         </modal>
     </div>
 </div>
+
+`;

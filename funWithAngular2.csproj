@@ -64,10 +64,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\app.component.html" />
-    <Content Include="app\overview\overview.component.html" />
-    <Content Include="app\list\listitem.component.html" />
-    <Content Include="app\list\list.component.html" />
     <Content Include="gruntfile.js" />
     <Content Include="index.html" />
     <Content Include="karma-test-shim.js" />
@@ -94,11 +90,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\app.component.html.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\common\maptoiterable.ts" />
+    <TypeScriptCompile Include="app\list\list.component.html.ts" />
+    <TypeScriptCompile Include="app\list\listitem.component.html.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\list\treeselector.ts" />
+    <TypeScriptCompile Include="app\overview\overview.component.html.ts" />
     <TypeScriptCompile Include="app\overview\overview.component.ts" />
     <TypeScriptCompile Include="app\services\item.service.ts" />
     <TypeScriptCompile Include="app\list\listitem.component.ts" />

@@ -3,12 +3,12 @@ import { ItemService} from '../services/item.service'
 import { Item} from '../models/item'
 import { TreeSelector} from '../list/treeselector';
 import { FormsModule } from '@angular/forms';
+import { htmlTemplate } from './list.component.html';
 import * as _ from 'underscore';
 
 @Component({
-    moduleId: module.id,
     selector: 'list',
-    templateUrl: 'list.component.html',
+    template: htmlTemplate,
     providers: [TreeSelector],
 })
 export class ListComponent implements OnInit {
