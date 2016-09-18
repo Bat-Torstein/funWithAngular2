@@ -1,9 +1,9 @@
 ﻿import { Component } from '@angular/core';
-import { htmlTemplate } from './overview.component.html';
 
 @Component({
+    moduleId: module.id,
     selector: 'overview',
-    template: htmlTemplate
+    templateUrl: 'overview.component.html'
 })
 
 export class OverviewComponent {} 

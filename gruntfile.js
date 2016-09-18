@@ -7,6 +7,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.initConfig({
         clean: {
@@ -52,6 +53,13 @@ module.exports = function (grunt) {
                 }
             },
         },
+        copy: {
+            main: {
+                expand: true,
+                src: 'app/**/*.html',
+                dest: 'dist/',
+            },
+        }
     });
     // the default task (running "grunt" in console) is "watch"
     grunt.registerTask('default', ['watch']);

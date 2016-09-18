@@ -1,11 +1,11 @@
 ﻿import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { Item } from '../models/item';
 import { TreeSelector } from './treeselector';
-import { htmlTemplate} from './listitem.component.html';
 
 @Component({
+    moduleId: module.id,
     selector: 'list-item',
-    template: htmlTemplate
+    templateUrl: 'listitem.component.html'
 })
 export class ListItemComponent {
     @Input() item: Item;
