@@ -20,17 +20,13 @@
 
           { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false },
           { pattern: 'node_modules/rxjs/**/*.js.map', included: false, watched: false },
-
           { pattern: 'karma-test-shim.js', included: true, watched: true },
-
           { pattern: 'node_modules/@angular/**/*.js', included: false, watched: true },
           { pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: true },
-
           { pattern: 'node_modules/underscore/**/*.js', included: false, watched: true },
-
+          { pattern: 'node_modules/ng2-modal/*.js', included: false, watched: true },
           { pattern: 'dist/**/*.js', included: false, watched: true },
-
-          { pattern: 'app/**/*.html', included: false, watched: true },
+          { pattern: 'dist/**/*.html', included: false, watched: true },
 
           // paths to support debugging with source maps in dev tools
           { pattern: 'app/**/*.ts', included: false, watched: true },
@@ -40,6 +36,11 @@
         proxies: {
             // required for component assests fetched by Angular's compiler
             "/app/": "/base/app/"
+        },
+
+        phantomjsLauncher: {
+            // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom) 
+            exitOnResourceError: true
         },
 
         reporters: ['progress'],

@@ -64,6 +64,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.component.html" />
+    <Content Include="app\dialogs\confirmdialog.component.html" />
     <Content Include="gruntfile.js" />
     <Content Include="index.html" />
     <Content Include="karma-test-shim.js" />
@@ -90,12 +92,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\app.component.html.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\common\maptoiterable.ts" />
     <Content Include="app\list\list.component.html" />
     <Content Include="app\list\listitem.component.html" />
+    <TypeScriptCompile Include="app\dialogs\confirmdialog.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\list\treeselector.ts" />
     <Content Include="app\overview\overview.component.html" />
@@ -106,6 +108,7 @@
     <TypeScriptCompile Include="app\models\item.ts" />
     <TypeScriptCompile Include="app\services\mock-items.ts" />
     <TypeScriptCompile Include="tests\common\maptoiterable.spec.ts" />
+    <TypeScriptCompile Include="tests\dialogs\confirmdialog.component.spec.ts" />
     <TypeScriptCompile Include="tests\list\list.component.spec.ts" />
     <TypeScriptCompile Include="tests\list\listitem.component.spec.ts" />
     <TypeScriptCompile Include="tests\list\treeselector.spec.ts" />

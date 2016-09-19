@@ -1,0 +1,19 @@
+﻿<modal title="{{title}}"
+       cancelButtonLabel="cancel"
+       submitButtonLabel="ok"
+       modalClass="modal-lg modal-sm any-other-css-class"
+       [hideCloseButton]="false"
+       [closeOnEscape]="false"
+       [closeOnOutsideClick]="false"
+       (onSubmit)="onSubmit()">
+    <modal-header>
+        {{title}}
+    </modal-header>
+
+    <modal-content>
+        {{text}}
+    </modal-content>
+
+    <modal-footer>
+    </modal-footer>
+</modal>

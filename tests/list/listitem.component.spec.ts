@@ -1,73 +1,101 @@
-﻿import {inject, ComponentFixture} from '@angular/core/testing';
+﻿import {inject, TestBed, async, ComponentFixture} from '@angular/core/testing';
 import {ListItemComponent} from '../../app/list/listitem.component';
 import {TreeSelector} from '../../app/list/treeselector';
 import {Item} from '../../app/models/item';
 
 describe('ListItemComponent', () => {
-    let listItemComponent: ListItemComponent;
-    let treeSelector: TreeSelector;
     let itemWithChildren = new Item(1, "withChildren");
     itemWithChildren.children = [];
     itemWithChildren.children.push(new Item(11, "child"));
     let itemWithNoChildren = new Item(2, "nochildren");
 
     beforeEach(() => {
-        treeSelector = new TreeSelector();
-        listItemComponent = new ListItemComponent(treeSelector);
+        TestBed.configureTestingModule({
+            declarations: [ListItemComponent],
+            providers: [TreeSelector]
+        });
     });
 
-    it('can open when closed and item has children', () => {
-        listItemComponent.item = itemWithChildren;
-        listItemComponent.open = false;
-
-        expect(listItemComponent.canOpen()).toBeTruthy();
+    beforeEach(() => {
+        TestBed.compileComponents();
     });
 
-    it('can not open when already open', () => {
-        listItemComponent.item = new Item(1, "name");
-        listItemComponent.open = true;
+    describe('ListItemComponent', () => {
+        beforeEach(async(() => {
+            TestBed.compileComponents();
+        }));
 
-        expect(listItemComponent.canOpen()).toBeFalsy();
-    });
+        it('can open when closed and item has children', () => {
+            let fixture = TestBed.createComponent(ListItemComponent);
+            let comp = fixture.debugElement.componentInstance;
+            comp.item = itemWithChildren;
+            comp.open = false;
 
-    it('can not open when item has no children', () => {
-        listItemComponent.item = itemWithNoChildren;
-        listItemComponent.open = false;
+            expect(comp.canOpen()).toBeTruthy();
+        });
 
-        expect(listItemComponent.canOpen()).toBeFalsy();
-   });
+        it('can not open when already open', () => {
+            let fixture = TestBed.createComponent(ListItemComponent);
+            let comp = fixture.debugElement.componentInstance;
+            comp.item = new Item(1, "name");
+            comp.open = true;
 
-    it('can close when open and item has children', () => {
-        listItemComponent.item = itemWithChildren;
-        listItemComponent.open = true;
+             expect(comp.canOpen()).toBeFalsy();
+         });
 
-        expect(listItemComponent.canClose()).toBeTruthy();
-    });
+        it('can not open when item has no children', () => {
+            let fixture = TestBed.createComponent(ListItemComponent);
+            let comp = fixture.debugElement.componentInstance;
+            comp.item = itemWithNoChildren;
+            comp.open = false;
 
-    it('can not close when already closed', () => {
-        listItemComponent.item = itemWithChildren;
-        listItemComponent.open = false;
+            expect(comp.canOpen()).toBeFalsy();
+        });
 
-        expect(listItemComponent.canClose()).toBeFalsy();
-    });
+        it('can close when open and item has children', () => {
+            let fixture = TestBed.createComponent(ListItemComponent);
+            let comp = fixture.debugElement.componentInstance;
+            comp.item = itemWithChildren;
+            comp.open = true;
 
-    it('can not close when item has no children', () => {
-        listItemComponent.item = itemWithNoChildren;
-        listItemComponent.open = true;
+            expect(comp.canClose()).toBeTruthy();
+         });
 
-        expect(listItemComponent.canClose()).toBeFalsy();
-    });
+        it('can not close when already closed', () => {
+            let fixture = TestBed.createComponent(ListItemComponent);
+            let comp = fixture.debugElement.componentInstance;
+            comp.item = itemWithChildren;
+            comp.open = false;
 
-    it('is selected when treeSelector contains item in selected list', () => {
-        listItemComponent.item = new Item(1, "name");
-        treeSelector.singleSelect(listItemComponent.item);
+            expect(comp.canClose()).toBeFalsy();
+         });
 
-        expect(listItemComponent.isSelected()).toBeTruthy();
-    });
+        it('can not close when item has no children', () => {
+            let fixture = TestBed.createComponent(ListItemComponent);
+            let comp = fixture.debugElement.componentInstance;
+            comp.item = itemWithNoChildren;
+            comp.open = true;
 
-    it('is not selected when treeSelector contains other items', () => {
-        listItemComponent.item = new Item(1, "name");
-        
-        expect(listItemComponent.isSelected()).toBeFalsy();
+            expect(comp.canClose()).toBeFalsy();
+         });
+
+        it('is selected when treeSelector contains item in selected list', inject([TreeSelector], (treeSelector: TreeSelector) => {
+            let fixture = TestBed.createComponent(ListItemComponent);
+            let comp = fixture.debugElement.componentInstance;
+            comp.item = new Item(1, "name");
+            treeSelector.singleSelect(comp.item);
+            fixture.detectChanges();
+
+            expect(comp.isSelected()).toBeTruthy();
+         }));
+
+        it('is not selected when treeSelector contains other items', () => {
+            let fixture = TestBed.createComponent(ListItemComponent);
+            let comp = fixture.debugElement.componentInstance;
+            comp.item = new Item(1, "name");
+            fixture.detectChanges();
+
+            expect(comp.isSelected()).toBeFalsy();
+         });
     });
 }); 

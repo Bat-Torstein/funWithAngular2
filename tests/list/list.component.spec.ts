@@ -26,14 +26,12 @@ describe('ListComponent', () => {
             ],
             imports: [FormsModule]
         });
-        
     });
 
     describe('ListComponent', () => {
         beforeEach(async(() => {
             TestBed.compileComponents();
         }));
-
         it('should display a list of items', () => {
             let fixture = TestBed.createComponent(ListComponent);
             fixture.componentInstance.items = [new Item(1, "first"), new Item(2, "second")];

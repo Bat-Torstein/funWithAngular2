@@ -32,7 +32,7 @@ System.config({
 System.config(
 {
     paths: {
-       'npm:' : 'node_modules/'
+        'npm:' : 'node_modules/'
     },
     map: {
         'app' : 'dist/app',
@@ -42,6 +42,7 @@ System.config(
         '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
         '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
         '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+        '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
 
         // angular testing umd bundles
         '@angular/core/testing': 'npm:@angular/core/bundles/core-testing.umd.js',
@@ -53,17 +54,13 @@ System.config(
         // other libraries
         'rxjs': 'npm:rxjs',
         'underscore': 'npm:underscore/underscore.js',
+        'ng2-modal' : 'npm:ng2-modal'
     },
     packages: {
-        'app': {
-            defaultExtension: 'js'
-        },
-        'rxjs': {
-            defaultExtension: 'js'
-        },
-        'underscore': {
-            defaultExtension: 'js'
-        }
+        'app': {defaultExtension: 'js'},
+        'rxjs': {defaultExtension: 'js'},
+        'underscore': {defaultExtension: 'js' },
+        'ng2-modal' : {main: 'index.js', defaultExtension:'js'}
     }
 });
 
@@ -78,7 +75,6 @@ Promise.all([
       testingBrowser.platformBrowserDynamicTesting());
     
 }).then(function () {
-    
     // Finally, load all spec files.
     // This will run the tests directly.
     return Promise.all(
