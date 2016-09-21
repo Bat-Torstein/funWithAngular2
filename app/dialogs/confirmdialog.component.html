@@ -1,7 +1,7 @@
 ﻿<modal title="{{title}}"
        cancelButtonLabel="cancel"
        submitButtonLabel="ok"
-       modalClass="modal-lg modal-sm any-other-css-class"
+       modalClass="modal-lg"
        [hideCloseButton]="false"
        [closeOnEscape]="false"
        [closeOnOutsideClick]="false"
@@ -9,11 +9,11 @@
     <modal-header>
         {{title}}
     </modal-header>
-
     <modal-content>
+        <div class="scroll-modal-body">
         {{text}}
+        </div>
     </modal-content>
-
     <modal-footer>
     </modal-footer>
 </modal>

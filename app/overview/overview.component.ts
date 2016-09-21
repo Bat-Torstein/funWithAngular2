@@ -7,8 +7,17 @@
 })
 
 export class OverviewComponent {
+    text: string;
+
+    constructor() {
+        this.text = "";
+        for (var i = 0; i < 10000; i++) {
+            this.text += i.toString() + " ";
+        }
+    }
 
     userConfirms() {
         console.log("Confirmed");
     }
+
 } 

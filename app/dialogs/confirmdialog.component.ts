@@ -12,7 +12,8 @@ export class ConfirmDialogComponent {
     @ViewChild(Modal) modal: Modal;
     @Output() onOk: EventEmitter<any> = new EventEmitter();
 
-    open() {
+    open(text: string) {
+        this.text = text;
         this.modal.open();        
     }
 

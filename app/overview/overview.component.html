@@ -6,7 +6,6 @@
 <confirm-dialog
     #confirmdialog
     title="Fortsett"
-    text="Vil du fortsette?"
     (onOk) ="userConfirms()">
 </confirm-dialog>
-<button class="btn btn-primary" (click)="confirmdialog.open()">TestConfirm</button>
+<button class="btn btn-primary" (click)="confirmdialog.open(text)">TestConfirm</button>

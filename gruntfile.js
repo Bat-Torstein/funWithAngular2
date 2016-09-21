@@ -49,7 +49,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     // compilation.css  :  source.less
-                    "../styles.css": "app.less"
+                    "styles.css": "app.less"
                 }
             },
         },

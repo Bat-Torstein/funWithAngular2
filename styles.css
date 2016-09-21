@@ -6728,3 +6728,7 @@ ul {
   background-color: #CFD8DC !important;
   color: white;
 }
+.scroll-modal-body {
+  height: 600px;
+  overflow-y: auto;
+}
