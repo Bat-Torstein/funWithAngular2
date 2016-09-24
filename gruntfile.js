@@ -4,35 +4,8 @@ module.exports = function (grunt) {
     // load all grunt tasks
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.initConfig({
-        clean: {
-            js: ['dist/app.js', 'dist/**/*.js', 'dist/**/*.js.map']
-        },
-        concat: {
-            options: {
-                separator: ';',
-            },
-            dist: {
-                src: ['dist/app/*.js', 'dist/app/**/*.js'],
-                dest: 'dist/app.js',
-            },
-        },
-        uglify: {
-            options: {
-                mangle: false,
-                compress: true
-            },
-            my_target: {
-                files: {
-                    'app.min.js': ['dist/app.js']
-                }
-            }
-        },
         watch: {
             // if any .less file changes in directory "public/css/" run the "less"-task.
             files: ['*.less', '**/*.less'],
@@ -51,13 +24,6 @@ module.exports = function (grunt) {
                     // compilation.css  :  source.less
                     "styles.css": "app.less"
                 }
-            },
-        },
-        copy: {
-            main: {
-                expand: true,
-                src: 'app/**/*.html',
-                dest: 'dist/',
             },
         }
     });

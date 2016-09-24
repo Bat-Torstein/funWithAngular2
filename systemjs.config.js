@@ -3,7 +3,7 @@
         'npm:': 'node_modules/',
     },
     map: {
-        'app': 'dist/app',
+        'app': 'app',
         'rxjs': 'npm:rxjs',
         '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
         '@angular/common': 'npm:@angular/common/bundles/common.umd.js',

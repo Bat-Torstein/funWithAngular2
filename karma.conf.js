@@ -25,8 +25,11 @@
           { pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: true },
           { pattern: 'node_modules/underscore/**/*.js', included: false, watched: true },
           { pattern: 'node_modules/ng2-modal/*.js', included: false, watched: true },
-          { pattern: 'dist/**/*.js', included: false, watched: true },
-          { pattern: 'dist/**/*.html', included: false, watched: true },
+          { pattern: 'tests/*.js', included: false, watched: true },
+          { pattern: 'tests/**/*.js', included: false, watched: true },
+          { pattern: 'app/*.js', included: false, watched: true },
+          { pattern: 'app/**/*.js', included: false, watched: true },
+          { pattern: 'app/**/*.html', included: false, watched: true },
 
           // paths to support debugging with source maps in dev tools
           { pattern: 'app/**/*.ts', included: false, watched: true },
