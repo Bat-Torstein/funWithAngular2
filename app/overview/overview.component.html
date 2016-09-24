@@ -3,9 +3,5 @@
 </div>
 <div class="col-md-9">
 </div>
-<confirm-dialog
-    #confirmdialog
-    title="Fortsett"
-    (onOk) ="userConfirms()">
-</confirm-dialog>
-<button class="btn btn-primary" (click)="confirmdialog.open(text)">TestConfirm</button>
+<button class="btn btn-primary" (click)="userConfirm()">TestConfirm</button>
+<confirm-dialog></confirm-dialog>

@@ -1,4 +1,5 @@
-﻿import {Component, Input, Output, EventEmitter, ViewChild} from '@angular/core';
+﻿import {Component, ViewChild, Output} from '@angular/core';
+import {Subject} from 'rxjs/Subject';
 import {Modal} from 'ng2-modal';
 
 @Component({
@@ -6,23 +7,27 @@ import {Modal} from 'ng2-modal';
     selector: 'confirm-dialog',
     templateUrl: 'confirmdialog.component.html'
 })
-export class ConfirmDialogComponent {
-    @Input() title;
-    @Input() text;
+export class ConfirmDialogComponent{
     @ViewChild(Modal) modal: Modal;
-    @Output() onOk: EventEmitter<any> = new EventEmitter();
+    title: string;
+    text: string;
+    response: Subject<boolean> = new Subject<boolean>();
 
-    open(text: string) {
+    confirm(title: string, text: string) : Subject<boolean> {
+        this.title = title;
         this.text = text;
-        this.modal.open();        
-    }
+        this.modal.open();
 
-    close() {
-        this.modal.close();
+        return this.response;
     }
 
     onSubmit() {
-        this.onOk.emit(null);
-        this.close();    
+        this.response.next(true);
+        this.modal.close();
+    }
+
+    onCancel() {
+        this.response.next(false);
+        this.modal.close();
     }
 } 

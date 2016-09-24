@@ -1,23 +1,21 @@
-﻿import { Component } from '@angular/core';
+﻿import { Component, ViewChild } from '@angular/core';
+import { ConfirmDialogComponent} from '../dialogs/confirmdialog.component';
 
 @Component({
     moduleId: module.id,
     selector: 'overview',
     templateUrl: 'overview.component.html'
 })
-
 export class OverviewComponent {
-    text: string;
+    @ViewChild(ConfirmDialogComponent) confirmDialog: ConfirmDialogComponent;
 
-    constructor() {
-        this.text = "";
-        for (var i = 0; i < 10000; i++) {
-            this.text += i.toString() + " ";
-        }
+    userConfirm() {
+        let response = this.confirmDialog.confirm("Confirm", "Mordi?");
+        response.subscribe(ok => {
+            if (ok) {
+                console.log("User confirms");
+            }
+            response.unsubscribe();
+        });
     }
-
-    userConfirms() {
-        console.log("Confirmed");
-    }
-
 } 
