@@ -3,5 +3,10 @@
 </div>
 <div class="col-md-9">
 </div>
-<button class="btn btn-primary" (click)="userConfirm()">TestConfirm</button>
-<confirm-dialog></confirm-dialog>
+<button class="btn btn-primary" (click)="confirm.open()">TestConfirm</button>
+<confirm-dialog 
+    #confirm
+    title="Confirm" 
+    text="Confirm me" 
+    (onOk)="userConfirms()">
+</confirm-dialog>

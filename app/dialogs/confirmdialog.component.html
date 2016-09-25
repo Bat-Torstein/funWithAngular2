@@ -5,12 +5,11 @@
        [hideCloseButton]="false"
        [closeOnEscape]="false"
        [closeOnOutsideClick]="false"
-       (onSubmit)="onSubmit()" 
-       (onCancel)="onCancel()">
-    <modal-header>
-    </modal-header>
+       (onSubmit)="onSubmit()">
     <modal-content>
+        <div>
         {{text}}
+        </div>
     </modal-content>
     <modal-footer>
     </modal-footer>
