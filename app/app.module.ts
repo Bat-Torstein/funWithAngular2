@@ -1,20 +1,19 @@
-﻿import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+﻿import {NgModule}      from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent }  from './app.component';
-import { FormsModule } from '@angular/forms';
-import { ModalModule} from 'ng2-modal';
+import {PipesModule} from './pipes/index';
+import {DialogModule} from './dialogs/index';
+import {ListModule} from './list/index';
 
+import {ItemService} from './services/item.service';
+
+import {AppComponent}  from './app.component';
 import {OverviewComponent} from './overview/overview.component';
-import {ListComponent} from './list/list.component';
-import {ListItemComponent} from './list/listitem.component';
-import {MapToIterablePipe} from './common/maptoiterable';
-
-import {ConfirmDialogComponent} from './dialogs/confirmdialog.component';
 
 @NgModule({
-  imports:      [BrowserModule, FormsModule, ModalModule],
-  declarations: [AppComponent, OverviewComponent, ListItemComponent, ListComponent, MapToIterablePipe, ConfirmDialogComponent],
-  bootstrap:    [ AppComponent ]
+  imports:      [BrowserModule, PipesModule, DialogModule, ListModule],
+  declarations: [AppComponent, OverviewComponent],
+  providers:    [ItemService],
+  bootstrap:    [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-﻿import {MapToIterablePipe} from '../../app/common/maptoiterable';
+﻿import {MapToIterablePipe} from '../../app/pipes/maptoiterable';
 import {TestBed} from '@angular/core/testing';
 
 describe('Pipe: MapToIterable', () => {

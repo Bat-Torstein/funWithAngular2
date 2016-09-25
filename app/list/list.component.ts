@@ -1,15 +1,14 @@
-﻿import { Component, OnInit } from '@angular/core';
-import { ItemService} from '../services/item.service'
-import { Item} from '../models/item'
-import { TreeSelector} from '../list/treeselector';
-import { FormsModule } from '@angular/forms';
+﻿import {Component, OnInit} from '@angular/core';
+import {ItemService} from '../services/item.service'
+import {Item} from '../models/item'
+import {TreeSelector} from '../list/treeselector';
 import * as _ from 'underscore';
 
 @Component({
     moduleId: module.id,
     selector: 'list',
     templateUrl: 'list.component.html',
-    providers: [TreeSelector],
+    providers: [TreeSelector]
 })
 export class ListComponent implements OnInit {
     textValue: string;

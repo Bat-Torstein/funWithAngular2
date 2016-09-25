@@ -1,5 +1,4 @@
-﻿import { Component, ViewChild } from '@angular/core';
-import { ConfirmDialogComponent} from '../dialogs/confirmdialog.component';
+﻿import {Component} from '@angular/core';
 
 @Component({
     moduleId: module.id,

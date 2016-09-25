@@ -5,7 +5,7 @@ import {Item} from '../../app/models/item';
 import {ItemService} from '../../app/services/item.service';
 import {TreeSelector} from '../../app/list/treeselector';
 import {FormsModule} from '@angular/forms';
-import {MapToIterablePipe} from '../../app/common/maptoiterable';
+import {PipesModule} from '../../app/pipes/index';
 
 class MockItemService extends ItemService {
     getItems() {
@@ -20,11 +20,11 @@ class MockItemService extends ItemService {
 describe('ListComponent', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [ListComponent, MapToIterablePipe, ListItemComponent],
+            declarations: [ListComponent, ListItemComponent],
             providers: [
                 { provide: ItemService, useClass: MockItemService }
             ],
-            imports: [FormsModule]
+            imports: [FormsModule, PipesModule]
         });
     });
 

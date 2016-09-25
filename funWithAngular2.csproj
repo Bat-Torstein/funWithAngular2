@@ -66,6 +66,7 @@
   <ItemGroup>
     <Content Include="app\app.component.html" />
     <Content Include="app\dialogs\confirmdialog.component.html" />
+    <Content Include="app\overview\overview.component.html" />
     <Content Include="gruntfile.js" />
     <Content Include="index.html" />
     <Content Include="karma-test-shim.js" />
@@ -94,14 +95,16 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
-    <TypeScriptCompile Include="app\common\maptoiterable.ts" />
     <Content Include="app\list\list.component.html" />
     <Content Include="app\list\listitem.component.html" />
     <TypeScriptCompile Include="app\dialogs\confirmdialog.component.ts" />
+    <TypeScriptCompile Include="app\dialogs\index.ts" />
+    <TypeScriptCompile Include="app\list\index.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\list\treeselector.ts" />
-    <Content Include="app\overview\overview.component.html" />
     <TypeScriptCompile Include="app\overview\overview.component.ts" />
+    <TypeScriptCompile Include="app\pipes\index.ts" />
+    <TypeScriptCompile Include="app\pipes\maptoiterable.ts" />
     <TypeScriptCompile Include="app\services\item.service.ts" />
     <TypeScriptCompile Include="app\list\listitem.component.ts" />
     <TypeScriptCompile Include="app\list\list.component.ts" />
