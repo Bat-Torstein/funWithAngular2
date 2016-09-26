@@ -4,9 +4,13 @@
 <div class="col-md-9">
 </div>
 <button class="btn btn-primary" (click)="confirm.open()">TestConfirm</button>
+<button class="btn btn-primary" (click)="attributes.open()">TestAttributes</button>
 <confirm-dialog 
     #confirm
     title="Confirm" 
     text="Confirm me" 
     (onOk)="userConfirms()">
 </confirm-dialog>
+<attribute-dialog 
+    #attributes>
+</attribute-dialog>

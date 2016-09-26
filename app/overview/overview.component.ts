@@ -8,10 +8,9 @@ import {ToastsManager} from 'ng2-toastr/ng2-toastr';
 })
 export class OverviewComponent {
     constructor(private toastsManager: ToastsManager) {
-
     }
+
     userConfirms() {
-        console.log("User confirms");
         this.toastsManager.success("yay");
     }
 } 

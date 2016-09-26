@@ -16,8 +16,12 @@ export class ConfirmDialogComponent {
         this.modal.open();        
     }
 
-    onSubmit() {
+    confirm() {
         this.onOk.emit(null);
         this.modal.close();    
+    }
+
+    cancel() {
+        this.modal.close();
     }
 } 

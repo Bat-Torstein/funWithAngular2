@@ -32,22 +32,22 @@ describe('ConfirmDialog', () => {
             expect(comp.modal.open).toHaveBeenCalled();
         });
 
-        it('should emit onOk when modal emits submit', () => {
+        it('should emit onOk when modal confirms', () => {
             let fixture = TestBed.createComponent(ConfirmDialogComponent);
             let comp = fixture.componentInstance;
             spyOn(comp.onOk, "emit");
 
-            comp.modal.onSubmit.emit(null);
+            comp.confirm();
 
             expect(comp.onOk.emit).toHaveBeenCalled();
         });
 
-        it('should close the dialog when modal submits', () => {
+        it('should close the dialog when modal confirms', () => {
             let fixture = TestBed.createComponent(ConfirmDialogComponent);
             let comp = fixture.componentInstance;
             spyOn(comp.modal, "close");
 
-            comp.modal.onSubmit.emit(null);
+            comp.confirm();
 
             expect(comp.modal.close).toHaveBeenCalled();
         });
