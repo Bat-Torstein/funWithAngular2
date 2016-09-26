@@ -1,6 +1,6 @@
-﻿import {TestBed, inject, async} from '@angular/core/testing';
-import {ConfirmDialogComponent} from '../../app/dialogs/confirmdialog.component';
-import {Modal, ModalModule} from 'ng2-modal';
+﻿import { TestBed, inject, async } from '@angular/core/testing';
+import { ConfirmDialogComponent } from '../../app/dialogs/confirmdialog.component';
+import { Modal, ModalModule } from 'ng2-modal';
 
 describe('ConfirmDialog', () => {
     beforeEach(() => {

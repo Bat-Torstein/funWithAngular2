@@ -11,7 +11,7 @@
     "test": "karma start karma.conf.js",
     "remap-istanbul": "remap-istanbul -i ./report/coverage/coverage-final.json -o ./report/coverage/html-report -t html",
     "testcover": "karma start karma.cover.conf.js && npm run remap-istanbul",
-    "lint": "node_modules/.bin/tslint -c tslint.json **/*.ts"
+    "lint": "node_modules/.bin/tslint -c tslint.json **/*.ts -e node_modules/**/*.ts"
   },
   "license": "ISC",
   "dependencies": {

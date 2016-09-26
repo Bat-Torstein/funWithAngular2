@@ -1,9 +1,9 @@
-﻿import {Component} from '@angular/core';
-import {ToastsManager} from 'ng2-toastr/ng2-toastr';
+﻿import { Component } from '@angular/core';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
     moduleId: module.id,
-    selector: 'overview',
+    selector: 'app-overview',
     templateUrl: 'overview.component.html'
 })
 export class OverviewComponent {

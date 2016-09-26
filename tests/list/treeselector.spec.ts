@@ -1,5 +1,5 @@
-﻿import {TreeSelector} from '../../app/list/treeselector';
-import {Item} from '../../app/models/item';
+﻿import { TreeSelector } from '../../app/list/treeselector';
+import { Item } from '../../app/models/item';
 
 describe('TreeSelector', () => {
     let treeSelector: TreeSelector;

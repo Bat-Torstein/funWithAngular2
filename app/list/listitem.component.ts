@@ -1,4 +1,4 @@
-﻿import {
+﻿import { 
     Component,
     Input,
     Output,
@@ -7,7 +7,7 @@
     state,
     style,
     transition,
-    animate} from '@angular/core';
+    animate } from '@angular/core';
 import { Item } from '../models/item';
 import { TreeSelector } from './treeselector';
 

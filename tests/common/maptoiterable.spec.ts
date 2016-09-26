@@ -1,5 +1,5 @@
-﻿import {MapToIterablePipe} from '../../app/pipes/maptoiterable';
-import {TestBed} from '@angular/core/testing';
+﻿import { MapToIterablePipe } from '../../app/pipes/maptoiterable';
+import { TestBed } from '@angular/core/testing';
 
 describe('Pipe: MapToIterable', () => {
     let pipe: MapToIterablePipe;

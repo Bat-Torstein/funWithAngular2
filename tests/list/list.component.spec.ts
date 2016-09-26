@@ -1,11 +1,11 @@
-﻿import {TestBed, inject, ComponentFixture, async, tick, fakeAsync, flushMicrotasks} from '@angular/core/testing';
-import {ListComponent} from '../../app/list/list.component';
-import {ListItemComponent} from '../../app/list/listitem.component';
-import {Item} from '../../app/models/item';
-import {ItemService} from '../../app/services/item.service';
-import {TreeSelector} from '../../app/list/treeselector';
-import {FormsModule} from '@angular/forms';
-import {PipesModule} from '../../app/pipes/index';
+﻿import { TestBed, inject, ComponentFixture, async, tick, fakeAsync, flushMicrotasks } from '@angular/core/testing';
+import { ListComponent } from '../../app/list/list.component';
+import { ListItemComponent } from '../../app/list/listitem.component';
+import { Item } from '../../app/models/item';
+import { ItemService } from '../../app/services/item.service';
+import { TreeSelector } from '../../app/list/treeselector';
+import { FormsModule } from '@angular/forms';
+import { PipesModule } from '../../app/pipes/index';
 
 class MockItemService extends ItemService {
     getItems() {

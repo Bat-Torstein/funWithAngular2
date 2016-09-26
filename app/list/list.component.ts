@@ -1,12 +1,12 @@
-﻿import {Component, OnInit} from '@angular/core';
-import {ItemService} from '../services/item.service'
-import {Item} from '../models/item'
-import {TreeSelector} from '../list/treeselector';
+﻿import { Component, OnInit } from '@angular/core';
+import { ItemService } from '../services/item.service'
+import { Item } from '../models/item'
+import { TreeSelector } from '../list/treeselector';
 import * as _ from 'underscore';
 
 @Component({
     moduleId: module.id,
-    selector: 'list',
+    selector: 'item-list',
     templateUrl: 'list.component.html',
     providers: [TreeSelector]
 })

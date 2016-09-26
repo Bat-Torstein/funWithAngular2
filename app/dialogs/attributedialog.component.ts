@@ -1,6 +1,6 @@
-﻿import {Component, Input, Output, EventEmitter, ViewChild} from '@angular/core';
-import {ToastsManager} from 'ng2-toastr';
-import {Modal} from 'ng2-modal';
+﻿import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
+import { ToastsManager } from 'ng2-toastr';
+import { Modal } from 'ng2-modal';
 
 @Component({
     moduleId: module.id,
