@@ -80,6 +80,7 @@
     <Content Include="app.less" />
     <Content Include="package.json" />
     <Content Include="typings.json" />
+    <Content Include="tslint.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
