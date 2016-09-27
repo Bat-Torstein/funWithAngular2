@@ -1,0 +1,4 @@
+﻿<div [formGroup]="form">
+    <td>{{attribute.label}}</td><td><input [formControlName]="attribute.name" [value]="attribute.value"/></td>
+    <div *ngIf="!isValid()" class="alert alert-danger">{{attribute.label}} is incorrect</div>
+</div>

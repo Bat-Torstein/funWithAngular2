@@ -65,8 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.component.html" />
+    <Content Include="app\dialogs\attribute.component.html" />
     <Content Include="app\dialogs\attributedialog.component.html" />
     <Content Include="app\dialogs\confirmdialog.component.html" />
+    <Content Include="app\dialogs\attributetable.component.html" />
     <Content Include="app\overview\overview.component.html" />
     <Content Include="gruntfile.js" />
     <Content Include="index.html" />
@@ -99,7 +101,10 @@
     <TypeScriptCompile Include="app\app.module.ts" />
     <Content Include="app\list\list.component.html" />
     <Content Include="app\list\listitem.component.html" />
+    <TypeScriptCompile Include="app\dialogs\attribute.component.ts" />
     <TypeScriptCompile Include="app\dialogs\attributedialog.component.ts" />
+    <TypeScriptCompile Include="app\dialogs\attributemodel.ts" />
+    <TypeScriptCompile Include="app\dialogs\attributetable.component.ts" />
     <TypeScriptCompile Include="app\dialogs\confirmdialog.component.ts" />
     <TypeScriptCompile Include="app\dialogs\index.ts" />
     <TypeScriptCompile Include="app\list\index.ts" />

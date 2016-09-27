@@ -5,23 +5,13 @@
        [closeOnOutsideClick]="false">
     <modal-content>
         <div>
-            <form #attributeForm="ngForm">
-            <table class="table">
-                    <thead><tr><th>Attribute name</th><th>Attribute value</th></tr></thead>
-                    <tbody>
-                        <tr><td>Numeric attribute</td><td><input [(ngModel)]="numericAttribute" pattern="[0-9]+" name="numeric" class="form-control" #numeric="ngModel"/></tr>
-                        <div [hidden]="numeric.valid || numeric.pristine" class="alert alert-danger">Must be a number</div>
-                        <tr><td>Cannot have spaces</td><td><input [(ngModel)]="onlyTextAndNumbers" pattern="^[a-zA-Z0-9]*$" name="onlyTextAndNumbers" class="form-control" #onlytextandnumbers="ngModel"/></tr>
-                        <div [hidden]="onlytextandnumbers.valid || onlytextandnumbers.pristine" class="alert alert-danger">Cannot have spaces</div>
-                        <tr><td>Must have a value *</td><td><input [(ngModel)]="mustHaveValueAttribute" minlength="0" name="mustHaveValue" class="form-control" #mustHave="ngModel" required/></tr>
-                        <div [hidden]="mustHave.valid || mustHave.pristine" class="alert alert-danger">Must have a value</div>
-                    </tbody>
-                </table>
+            <form [formGroup]="form">
+                <attribute-table [attributes]="attributes" [form]="form"></attribute-table>
             </form>
         </div>
     </modal-content>
     <modal-footer>
         <button class="btn btn-default" (click)="cancel()">Cancel</button>
-        <button class="btn btn-primary" (click)="save()" type="submit" [disabled]="!attributeForm.form.valid">Ok</button>
+        <button class="btn btn-primary" (click)="save()" type="submit" [disabled]="!isValid()">Ok</button>
     </modal-footer>
 </modal>

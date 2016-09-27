@@ -1,0 +1,9 @@
+﻿<div [formGroup]="form">
+    <table class="table">
+        <thead><tr><th>Attribute name</th><th>Attribute value</th></tr></thead>
+        <tbody>
+            <tr *ngFor="let attribute of attributes"><attribute-details [attribute]="attribute" [form]="form"></attribute-details></tr>
+        </tbody>
+    </table>
+</div>
+
