@@ -2,7 +2,7 @@
     <table class="table">
         <thead><tr><th>Attribute name</th><th>Attribute value</th></tr></thead>
         <tbody>
-            <tr *ngFor="let attribute of attributes"><attribute-details [attribute]="attribute" [form]="form"></attribute-details></tr>
+            <tr attribute-row *ngFor="let attribute of attributes" [attribute]="attribute" [form]="form"></tr>
         </tbody>
     </table>
 </div>
