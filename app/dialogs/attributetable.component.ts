@@ -1,5 +1,4 @@
 ﻿import { Component, Input} from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { AttributeModel } from './attributemodel';
 
 @Component({
@@ -8,6 +7,5 @@ import { AttributeModel } from './attributemodel';
     templateUrl: 'attributetable.component.html'
 })
 export class AttributeTableComponent {
-    @Input() form: FormGroup;
     @Input() attributes: AttributeModel[];
 } 

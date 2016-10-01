@@ -1,3 +1,5 @@
-﻿<td [formGroup]="form">{{attribute.label}}</td><td [formGroup]="form"><input [formControlName]="attribute.name" [value]="attribute.value"/><div *ngIf="!isValid()" class="alert alert-danger">{{attribute.label}} is incorrect</div></td>
-
-
+﻿<td>{{attribute.label}}</td>
+<td>
+    <input [(ngModel)]="attribute.value" [pattern]="attribute.validPattern" name="attribute" class="form-control" #attr="ngModel" />
+    <div *ngIf="!attr.pristine && !attr.valid" class="alert alert-danger">{{attribute.label}} is incorrect</div>
+</td>

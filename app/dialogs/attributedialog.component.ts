@@ -1,17 +1,16 @@
-﻿import { Component, Input, Output, EventEmitter, ViewChild, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+﻿import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { ToastsManager } from 'ng2-toastr';
 import { Modal } from 'ng2-modal';
-import { AttributeModel } from './attributemodel';
+import { AttributeModel} from './attributemodel';
 
 @Component({
     moduleId: module.id,
     selector: 'attribute-dialog',
     templateUrl: 'attributedialog.component.html'
 })
-export class AttributeDialogComponent implements OnInit{
+export class AttributeDialogComponent {
     @ViewChild(Modal) modal: Modal;
-    form: FormGroup;
+   
     attributes: AttributeModel[];
 
     constructor(private toastsManager: ToastsManager) {
@@ -38,24 +37,5 @@ export class AttributeDialogComponent implements OnInit{
     save() {
        this.toastsManager.success("Jau!");
        this.modal.close();
-    }
-
-    isValid() : boolean {
-        return this.form.valid;
-    }
-
-    ngOnInit(): void {
-        // Convert to FormGroup:
-        let group: any = {};
-        this.attributes.forEach(attribute => {
-            if (attribute.isRequired) {
-                group[attribute.name] = new FormControl(attribute.value || '', Validators.required);
-            } else if (attribute.validPattern) {
-                group[attribute.name] = new FormControl(attribute.value || '', Validators.pattern(attribute.validPattern));
-            } else {
-                group[attribute.name] = new FormControl(attribute.value || '');
-            }
-        });
-        this.form = new FormGroup(group);
     }
 } 

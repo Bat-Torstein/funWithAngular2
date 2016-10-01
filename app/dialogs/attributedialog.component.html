@@ -5,13 +5,13 @@
        [closeOnOutsideClick]="false">
     <modal-content>
         <div>
-            <form [formGroup]="form">
-                <attribute-table [attributes]="attributes" [form]="form"></attribute-table>
+            <form #form="ngForm">
+                <attribute-table [attributes]="attributes"></attribute-table>
             </form>
         </div>
     </modal-content>
     <modal-footer>
         <button class="btn btn-default" (click)="cancel()">Cancel</button>
-        <button class="btn btn-primary" (click)="save()" type="submit" [disabled]="!isValid()">Ok</button>
+        <button class="btn btn-primary" (click)="save()" type="submit" [disabled]="!form.valid">Ok</button>
     </modal-footer>
 </modal>
