@@ -20,8 +20,12 @@
     }
 
     isValueValid(): boolean {
-        if (!this.value && this.isRequired) {
-            return false;
+        if (!this.value) {
+            if (this.isRequired) {
+                return false;
+            }
+
+            return true;
         }
 
         if (this.validPattern) {

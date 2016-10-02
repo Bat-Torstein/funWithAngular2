@@ -34,7 +34,6 @@ export class AttributeComponent implements ControlValueAccessor {
         this.onChange = fn;
     }
 
-
     registerOnTouched(fn) {
         this.onTouched = fn;
     }

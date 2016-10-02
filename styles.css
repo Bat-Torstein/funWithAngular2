@@ -6924,3 +6924,8 @@ ul {
   height: 600px;
   overflow-y: auto;
 }
+.form-control-expand {
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+}

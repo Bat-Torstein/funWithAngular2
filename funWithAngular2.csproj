@@ -68,6 +68,7 @@
     <Content Include="app\dialogs\attribute.component.html" />
     <Content Include="app\dialogs\attributedialog.component.html" />
     <Content Include="app\dialogs\confirmdialog.component.html" />
+    <Content Include="app\dialogs\textarea.component.html" />
     <Content Include="app\overview\overview.component.html" />
     <Content Include="gruntfile.js" />
     <Content Include="index.html" />
@@ -105,6 +106,7 @@
     <TypeScriptCompile Include="app\dialogs\attributemodel.ts" />
     <TypeScriptCompile Include="app\dialogs\confirmdialog.component.ts" />
     <TypeScriptCompile Include="app\dialogs\index.ts" />
+    <TypeScriptCompile Include="app\dialogs\textarea.component.ts" />
     <TypeScriptCompile Include="app\list\index.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\list\treeselector.ts" />
