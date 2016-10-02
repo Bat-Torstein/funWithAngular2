@@ -4,11 +4,14 @@
        [closeOnEscape]="false"
        [closeOnOutsideClick]="false">
     <modal-content>
-        <div>
-            <form #form="ngForm">
-                <attribute-table [attributes]="attributes"></attribute-table>
-            </form>
-        </div>
+        <form #form="ngForm">
+            <table class="table">
+                <thead><tr><th>Attribute name</th><th>Attribute value</th></tr></thead>
+                <tbody>
+                    <tr attribute-row *ngFor="let attribute of attributes" [name]="attribute.name" [ngModel]="attribute"></tr>
+                </tbody>
+            </table>
+        </form>           
     </modal-content>
     <modal-footer>
         <button class="btn btn-default" (click)="cancel()">Cancel</button>

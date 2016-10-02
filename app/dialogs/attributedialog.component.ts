@@ -16,7 +16,7 @@ export class AttributeDialogComponent {
     constructor(private toastsManager: ToastsManager) {
         this.attributes = [];
         let numeric = new AttributeModel("numeric", "Numeric Attribute", "");
-        numeric.validPattern = "[0-9]+";
+        numeric.validPattern = "^[0-9]+$";
         this.attributes.push(numeric);
         let onlyTextAndNumbers = new AttributeModel("onlyTextAndNumbers", "Only text and numbers", "");
         onlyTextAndNumbers.validPattern = "^[a-zA-Z0-9]*$";

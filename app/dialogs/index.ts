@@ -4,20 +4,17 @@ import { ConfirmDialogComponent } from './confirmdialog.component';
 import { AttributeDialogComponent } from './attributedialog.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { AttributeTableComponent } from './attributetable.component';
 import { AttributeComponent } from './attribute.component';
 
 @NgModule({
     declarations: [
         ConfirmDialogComponent,
         AttributeDialogComponent,
-        AttributeTableComponent,
         AttributeComponent
     ],
     exports: [
         ConfirmDialogComponent,
         AttributeDialogComponent,
-        AttributeTableComponent,
         AttributeComponent
     ],
     imports: [
