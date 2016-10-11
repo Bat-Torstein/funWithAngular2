@@ -10,7 +10,10 @@
     "noImplicitAny": false
   },
   "compileOnSave": true,
-  "exclude": [
-    "node_modules"
+  "include": [
+    "app/*.ts",
+    "app/**/*.ts",
+    "tests/**/*.ts",
+    "typings/*.ts"
   ]
 }

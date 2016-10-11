@@ -16,23 +16,19 @@ class MockItemService extends ItemService {
         return Promise.resolve(new Item(1,"name"));
     }
 }
-
 describe('ListComponent', () => {
-    beforeEach(() => {
+    beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [ListComponent, ListItemComponent],
             providers: [
                 { provide: ItemService, useClass: MockItemService }
             ],
             imports: [FormsModule, PipesModule]
-        });
-    });
+        }).compileComponents();
+    }));
 
-    describe('ListComponent', () => {
-        beforeEach(async(() => {
-            TestBed.compileComponents();
-        }));
-        it('should display a list of items', () => {
+    it('should display a list of items', () => {
+        TestBed.compileComponents().then(() => {
             let fixture = TestBed.createComponent(ListComponent);
             fixture.componentInstance.items = [new Item(1, "first"), new Item(2, "second")];
             fixture.detectChanges();

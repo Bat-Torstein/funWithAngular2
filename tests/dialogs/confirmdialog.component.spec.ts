@@ -3,53 +3,47 @@ import { ConfirmDialogComponent } from '../../app/dialogs/confirmdialog.componen
 import { Modal, ModalModule } from 'ng2-modal';
 
 describe('ConfirmDialog', () => {
-    beforeEach(() => {
+    beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [ConfirmDialogComponent],
             imports: [ModalModule]
-        });
+        }).compileComponents();
+    }));
+
+    it('should be a modal dialog', () => {
+        let fixture = TestBed.createComponent(ConfirmDialogComponent);
+        let modalClasses = fixture.debugElement.nativeElement.querySelectorAll(".modal");
+            
+        expect(modalClasses.length).toBeGreaterThan(0);
     });
 
-    describe('ConfirmDialog', () => {
-        beforeEach(async(() => {
-            TestBed.compileComponents();
-        }));
+    it('should open modal on open', () => {
+        let fixture = TestBed.createComponent(ConfirmDialogComponent);
+        let comp = fixture.componentInstance;
+        spyOn(comp.modal, "open");
 
-        it('should be a modal dialog', () => {
-            let fixture = TestBed.createComponent(ConfirmDialogComponent);
-            let modalClasses = fixture.debugElement.nativeElement.querySelectorAll(".modal");
-            
-            expect(modalClasses.length).toBeGreaterThan(0);
-        });
+        comp.open();
 
-        it('should open modal on open', () => {
-            let fixture = TestBed.createComponent(ConfirmDialogComponent);
-            let comp = fixture.componentInstance;
-            spyOn(comp.modal, "open");
+        expect(comp.modal.open).toHaveBeenCalled();
+    });
 
-            comp.open();
+    it('should emit onOk when modal confirms', () => {
+        let fixture = TestBed.createComponent(ConfirmDialogComponent);
+        let comp = fixture.componentInstance;
+        spyOn(comp.onOk, "emit");
 
-            expect(comp.modal.open).toHaveBeenCalled();
-        });
+        comp.confirm();
 
-        it('should emit onOk when modal confirms', () => {
-            let fixture = TestBed.createComponent(ConfirmDialogComponent);
-            let comp = fixture.componentInstance;
-            spyOn(comp.onOk, "emit");
+        expect(comp.onOk.emit).toHaveBeenCalled();
+    });
 
-            comp.confirm();
+    it('should close the dialog when modal confirms', () => {
+        let fixture = TestBed.createComponent(ConfirmDialogComponent);
+        let comp = fixture.componentInstance;
+        spyOn(comp.modal, "close");
 
-            expect(comp.onOk.emit).toHaveBeenCalled();
-        });
+        comp.confirm();
 
-        it('should close the dialog when modal confirms', () => {
-            let fixture = TestBed.createComponent(ConfirmDialogComponent);
-            let comp = fixture.componentInstance;
-            spyOn(comp.modal, "close");
-
-            comp.confirm();
-
-            expect(comp.modal.close).toHaveBeenCalled();
-        });
+        expect(comp.modal.close).toHaveBeenCalled();
     });
 }); 

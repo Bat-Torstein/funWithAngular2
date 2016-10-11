@@ -21,18 +21,17 @@
           { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false },
           { pattern: 'node_modules/rxjs/**/*.js.map', included: false, watched: false },
           { pattern: 'karma-test-shim.js', included: true, watched: true },
-          { pattern: 'node_modules/@angular/**/*.js', included: false, watched: true },
-          { pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: true },
-          { pattern: 'node_modules/underscore/**/*.js', included: false, watched: true },
-          { pattern: 'node_modules/ng2-modal/*.js', included: false, watched: true },
-          { pattern: 'tests/*.js', included: false, watched: true },
+          { pattern: 'node_modules/@angular/**/*.js', included: false, watched: false },
+          { pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: false },
+          { pattern: 'node_modules/underscore/**/*.js', included: false, watched: false },
+          { pattern: 'node_modules/ng2-modal/*.js', included: false, watched: false },
           { pattern: 'tests/**/*.js', included: false, watched: true },
           { pattern: 'app/*.js', included: false, watched: true },
           { pattern: 'app/**/*.js', included: false, watched: true },
           { pattern: 'app/**/*.html', included: false, watched: true },
 
           // paths to support debugging with source maps in dev tools
-          { pattern: 'app/**/*.ts', included: false, watched: true },
+          { pattern: 'app/**/*.ts', included: false, watched: true }
         ],
 
         // proxied base paths

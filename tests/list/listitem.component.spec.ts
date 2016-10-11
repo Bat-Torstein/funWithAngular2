@@ -9,20 +9,12 @@ describe('ListItemComponent', () => {
     itemWithChildren.children.push(new Item(11, "child"));
     let itemWithNoChildren = new Item(2, "nochildren");
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({
-            declarations: [ListItemComponent],
-            providers: [TreeSelector]
-        });
-    });
-
-    beforeEach(() => {
-        TestBed.compileComponents();
-    });
-
     describe('ListItemComponent', () => {
         beforeEach(async(() => {
-            TestBed.compileComponents();
+            TestBed.configureTestingModule({
+                declarations: [ListItemComponent],
+                providers: [TreeSelector]
+            }).compileComponents();
         }));
 
         it('can open when closed and item has children', () => {
