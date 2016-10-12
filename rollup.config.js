@@ -6,14 +6,14 @@ import uglify      from 'rollup-plugin-uglify';
 export default {
     entry: "app/main.prod.js",
     dest: "dist/bundle.js", 
-    sourceMap: true,
-    sourceMapFile: "dist/bundle.js.map",
+    sourceMap: false,
     format: 'iife',
     plugins: [
         nodeResolve({ jsnext: true, module:true}),
         commonjs({
             include: [
-                'node_modules/rxjs/**'
+                'node_modules/rxjs/**',
+                'node_modules/underscore/**'
             ],
         }),
         uglify()

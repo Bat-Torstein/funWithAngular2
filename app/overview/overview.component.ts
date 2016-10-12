@@ -1,5 +1,5 @@
 ﻿import { Component } from '@angular/core';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+//import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
     moduleId: module.id,
@@ -7,10 +7,10 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
     templateUrl: 'overview.component.html'
 })
 export class OverviewComponent {
-    constructor(private toastsManager: ToastsManager) {
+    constructor(/*private toastsManager: ToastsManager*/) {
     }
 
     userConfirms() {
-        this.toastsManager.success("yay");
+        //this.toastsManager.success("yay");
     }
 } 

@@ -1,5 +1,5 @@
 ﻿import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
-import { ToastsManager } from 'ng2-toastr';
+//import { ToastsManager } from 'ng2-toastr';
 import { Modal } from 'ng2-modal';
 import { AttributeModel} from './attributemodel';
 
@@ -13,7 +13,7 @@ export class AttributeDialogComponent {
    
     attributes: AttributeModel[];
 
-    constructor(private toastsManager: ToastsManager) {
+    constructor(/*private toastsManager: ToastsManager*/) {
         this.attributes = [];
         let numeric = new AttributeModel("numeric", "Numeric Attribute", "");
         numeric.validPattern = "^[0-9]+$";
@@ -35,7 +35,7 @@ export class AttributeDialogComponent {
     }
 
     save() {
-       this.toastsManager.success("Jau!");
+       //this.toastsManager.success("Jau!");
        this.modal.close();
     }
 } 
