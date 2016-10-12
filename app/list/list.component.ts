@@ -14,7 +14,7 @@ export class ListComponent implements OnInit {
     textValue: string;
     items: Item[];
 
-    constructor(private itemService: ItemService, private treeSelector: TreeSelector) {
+    constructor(private itemService: ItemService, public treeSelector: TreeSelector) {
     }
 
     getItems() {

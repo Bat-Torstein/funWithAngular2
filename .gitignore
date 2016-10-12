@@ -16,3 +16,5 @@ node_modules
 typings
 /report
 /*.log*
+/aot
+/dist
