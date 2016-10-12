@@ -5,7 +5,6 @@ import { TreeSelector } from '../list/treeselector';
 import * as _ from 'underscore';
 
 @Component({
-    moduleId: module.id,
     selector: 'item-list',
     templateUrl: 'list.component.html',
     providers: [TreeSelector]
