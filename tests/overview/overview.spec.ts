@@ -1,5 +1,28 @@
-﻿describe('OverView', () => {
-    it('should rock', () => {
-        expect(1).toBe(1);
+﻿import { Component } from '@angular/core';
+import { TestBed, async } from '@angular/core/testing';
+import { OverviewComponent } from '../../app/overview/overview.component';
+import { ToastsManager } from 'ng2-toastr';
+
+@Component({ selector: 'item-list', template: '' })
+class ItemListStub { }
+
+@Component({ selector: 'confirm-dialog', template: '' })
+class ConfirmDialogStub { }
+
+@Component({ selector: 'attribute-dialog', template: '' })
+class AttributeDialogStub { }
+
+describe('OverViewComponent', () => {
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [OverviewComponent, ConfirmDialogStub,
+                            ItemListStub, AttributeDialogStub],
+            providers: [ToastsManager]
+        }).compileComponents();
+    }));
+
+    it('has itemlist', () => {
+        let fixture = TestBed.createComponent(OverviewComponent);
+        expect(fixture.debugElement.nativeElement.innerHTML).toContain("item-list");
     });
-});
+}); 
