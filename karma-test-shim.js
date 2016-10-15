@@ -35,7 +35,8 @@ System.config(
         'npm:' : 'node_modules/'
     },
     map: {
-        'app' : 'app',
+        'app': 'app',
+        'tests' : 'tests',
         '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
         '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
         '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
@@ -58,7 +59,8 @@ System.config(
         'ng2-toastr' : 'npm:ng2-toastr'
     },
     packages: {
-        'app': {defaultExtension: 'js'},
+        'app': { defaultExtension: 'js' },
+        'tests': { defaultExtension: 'js' },
         'rxjs': {defaultExtension: 'js'},
         'underscore': {defaultExtension: 'js' },
         'ng2-modal': { main: 'index.js', defaultExtension: 'js' },
