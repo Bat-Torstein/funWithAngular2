@@ -130,6 +130,7 @@
     <TypeScriptCompile Include="tests\list\treeselector.spec.ts" />
     <TypeScriptCompile Include="tests\overview\overview.spec.ts" />
     <TypeScriptCompile Include="tests\services\item.service.spec.ts" />
+    <TypeScriptCompile Include="tests\stubs\stubs.module.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
     <TypeScriptCompile Include="app\vendor.ts" />
   </ItemGroup>

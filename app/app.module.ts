@@ -1,5 +1,6 @@
-﻿import { NgModule }      from '@angular/core';
+﻿import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MdSpinner } from '@angular2-material/progress-circle';
 
 import { PipesModule } from './pipes/index';
 //import { DialogModule } from './dialogs/index';
@@ -14,7 +15,7 @@ import { OverviewComponent } from './overview/overview.component';
 
 @NgModule({
   imports:      [BrowserModule, PipesModule, ListModule],
-  declarations: [AppComponent, OverviewComponent],
+  declarations: [AppComponent, OverviewComponent, MdSpinner],
   providers:    [ItemService],
   bootstrap:    [AppComponent]
 })
