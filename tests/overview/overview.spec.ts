@@ -6,6 +6,9 @@ import { ToastsManager } from 'ng2-toastr';
 @Component({ selector: 'item-list', template: '' })
 class ItemListStub { }
 
+@Component({ selector: 'md-spinner', template: '' })
+class SpinnerStub { }
+
 @Component({ selector: 'confirm-dialog', template: '' })
 class ConfirmDialogStub { }
 
@@ -16,7 +19,7 @@ describe('OverViewComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [OverviewComponent, ConfirmDialogStub,
-                            ItemListStub, AttributeDialogStub],
+                            ItemListStub, AttributeDialogStub, SpinnerStub],
             providers: [ToastsManager]
         }).compileComponents();
     }));
