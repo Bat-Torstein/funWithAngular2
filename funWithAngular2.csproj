@@ -72,6 +72,7 @@
     <Content Include="app\overview\overview.component.html" />
     <Content Include="gruntfile.js" />
     <Content Include="index.html" />
+    <Content Include="index_jspm.html" />
     <Content Include="karma-test-shim.js" />
     <Content Include="karma.conf.js" />
     <Content Include="karma.cover.conf.js" />
