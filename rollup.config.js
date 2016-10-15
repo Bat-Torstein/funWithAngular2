@@ -12,10 +12,9 @@ export default {
         nodeResolve({ jsnext: true, module:true}),
         commonjs({
             include: [
-                'node_modules/rxjs/**',
-                'node_modules/underscore/**'
+                "node_modules/rxjs/**"
             ],
         }),
-        uglify()
+        //uglify()
     ]
 }

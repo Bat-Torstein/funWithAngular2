@@ -8,7 +8,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "bundle": "ngc -p tsconfig.aot.json && rollup -c rollup.vendor.config.js && rollup -c rollup.config.js",
+    "bundle": "ngc -p tsconfig.aot.json && rollup -c rollup.config.js",
     "test": "karma start karma.conf.js",
     "remap-istanbul": "remap-istanbul -i ./report/coverage/coverage-final.json -o ./report/coverage/html-report -t html",
     "testcover": "karma start karma.cover.conf.js && npm run remap-istanbul",

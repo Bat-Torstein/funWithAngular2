@@ -16,7 +16,7 @@
         '@angular2-material/core' : 'npm:@angular2-material/core/core.umd.js', 
         '@angular2-material/progress-circle': 'npm:@angular2-material/progress-circle/progress-circle.umd.js',
 
-        'underscore': 'npm:underscore/underscore.js',
+        'underscore': 'npm:underscore',
         'ng2-modal': 'npm:ng2-modal',
         'ng2-toastr': 'npm:ng2-toastr'
     },
@@ -24,6 +24,7 @@
         'app': { main: 'main.js', defaultExtension: 'js' },
         'rxjs': { defaultExtension: 'js' },
         "ng2-modal": { "main": "index.js", "defaultExtension": "js" },
-        "ng2-toastr" : {main: "ng2-toastr.js", defaultExtension : "js"}
+        "ng2-toastr": { main: "ng2-toastr.js", defaultExtension: "js" },
+        "underscore" : { main: "underscore.js", format: "cjs" }
     }
 });

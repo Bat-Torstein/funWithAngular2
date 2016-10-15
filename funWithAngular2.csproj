@@ -77,7 +77,6 @@
     <Content Include="karma.cover.conf.js" />
     <Content Include="packages.config" />
     <Content Include="rollup.config.js" />
-    <Content Include="rollup.vendor.config.js" />
     <Content Include="styles.css" />
     <Content Include="systemjs.config.js" />
     <Content Include="tsconfig.json" />
@@ -132,7 +131,6 @@
     <TypeScriptCompile Include="tests\services\item.service.spec.ts" />
     <TypeScriptCompile Include="tests\stubs\stubs.module.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
-    <TypeScriptCompile Include="app\vendor.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

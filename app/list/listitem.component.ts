@@ -12,6 +12,7 @@ import { Item } from '../models/item';
 import { TreeSelector } from './treeselector';
 
 @Component({
+    moduleId: module.id,
     selector: 'list-item',
     templateUrl: 'listitem.component.html',
     animations: [
