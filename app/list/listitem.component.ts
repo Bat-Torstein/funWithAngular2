@@ -10,11 +10,11 @@
     animate } from '@angular/core';
 import { Item } from '../models/item';
 import { TreeSelector } from './treeselector';
+import template from './listitem.component.html!text';
 
 @Component({
-    moduleId: module.id,
     selector: 'list-item',
-    templateUrl: 'listitem.component.html',
+    template: template,
     animations: [
         trigger('appear', [
             state('in', style({ transform: 'translateY(0)'})),

@@ -13,10 +13,11 @@
 /tests/**/*.js
 /tests/**/*js.map
 node_modules
-typings
 /report
 /*.log*
 /jspm_packages
 /build.js
 /build.js.map
 /dist
+/typings/index.d.ts
+/typings/globals

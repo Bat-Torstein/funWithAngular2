@@ -1,11 +1,11 @@
 ﻿import { Component, Input, forwardRef} from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, FormControl} from '@angular/forms';
 import { AttributeModel } from './attributemodel';
+import template from './attribute.component.html!text';
 
 @Component({
-    moduleId: module.id,
     selector: '[attribute-row]',
-    templateUrl: 'attribute.component.html',
+    template: template,
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,

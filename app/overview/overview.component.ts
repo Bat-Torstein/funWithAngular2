@@ -1,10 +1,10 @@
 ﻿import { Component } from '@angular/core';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import template from './overview.component.html!text';
 
 @Component({
-    moduleId: module.id,
     selector: 'app-overview',
-    templateUrl: 'overview.component.html'
+    template: template
 })
 export class OverviewComponent {
     constructor(private toastsManager: ToastsManager) {

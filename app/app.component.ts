@@ -1,11 +1,11 @@
 ﻿import { Component } from '@angular/core';
 import { OverviewComponent } from './overview/overview.component';
 import { ItemService } from './services/item.service';
+import template from './app.component.html!text';
 
 @Component({
-    moduleId: module.id,
     selector: 'test-app',
-    templateUrl: 'app.component.html',
+    template: template,
     providers: [ItemService]
 })
 

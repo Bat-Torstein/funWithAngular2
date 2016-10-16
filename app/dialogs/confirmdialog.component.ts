@@ -1,10 +1,10 @@
 ﻿import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { Modal } from 'ng2-modal';
+import template from './confirmdialog.component.html!text';
 
 @Component({
-    moduleId: module.id,
     selector: 'confirm-dialog',
-    templateUrl: 'confirmdialog.component.html'
+    template: template
 })
 export class ConfirmDialogComponent {
     @Input() title: string;

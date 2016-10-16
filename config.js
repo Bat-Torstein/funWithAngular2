@@ -2,7 +2,7 @@ System.config({
   defaultJSExtensions: true,
   transpiler: "typescript",
   typescriptOptions: {
-    "module": "commonjs",
+    "module": "system",
     "target": "es5",
     "typeCheck": true,
     "tsconfig": true,
@@ -13,8 +13,7 @@ System.config({
       "@angular/compiler": "index.d.ts",
       "@angular/platform-browser": "index.d.ts",
       "@angular/platform-browser-dynamic": "index.d.ts",
-      "rxjs": "Rx.d.ts",
-      "": "typings/index.d.ts"
+      "rxjs": "Rx.d.ts"
     }
   },
   paths: {
@@ -51,6 +50,7 @@ System.config({
     "ng2-toastr": "npm:ng2-toastr@1.2.0",
     "reflect-metadata": "npm:reflect-metadata@0.1.8",
     "rxjs": "npm:rxjs@5.0.0-beta.12",
+    "text": "github:systemjs/plugin-text@0.0.9",
     "typescript": "npm:typescript@1.8.10",
     "underscore": "npm:underscore@1.8.3",
     "zone.js": "npm:zone.js@0.6.25",

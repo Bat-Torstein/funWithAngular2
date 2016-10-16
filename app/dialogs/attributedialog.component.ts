@@ -1,12 +1,12 @@
 ﻿import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { ToastsManager } from 'ng2-toastr';
 import { Modal } from 'ng2-modal';
-import { AttributeModel} from './attributemodel';
+import { AttributeModel } from './attributemodel';
+import template from './attributedialog.component.html!text';
 
 @Component({
-    moduleId: module.id,
     selector: 'attribute-dialog',
-    templateUrl: 'attributedialog.component.html'
+    template: template
 })
 export class AttributeDialogComponent {
     @ViewChild(Modal) modal: Modal;

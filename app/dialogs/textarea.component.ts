@@ -1,11 +1,11 @@
 ﻿import { Component, Input, ViewChild } from '@angular/core';
 import { Modal } from 'ng2-modal';
 import { AttributeModel } from './attributemodel';
+import template from './textarea.component.html!text';
 
 @Component({
-    moduleId: module.id,
     selector: 'textarea-dialog',
-    templateUrl: 'textarea.component.html'
+    template: template
 })
 export class TextAreaComponent {
     @Input() attribute: AttributeModel;
