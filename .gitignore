@@ -17,3 +17,6 @@ typings
 /report
 /*.log*
 /jspm_packages
+/build.js
+/build.js.map
+/dist

@@ -1,4 +1,6 @@
-﻿import { NgModule } from '@angular/core';
+﻿import "reflect-metadata";
+import "zone.js";
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MdSpinner } from '@angular2-material/progress-circle';
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "build": "jspm bundle-sfx dist app/main.js",
+    "build": "jspm bundle-sfx --inject app/main.js dist/dist.js && grunt copy",
     "lite": "lite-server",
     "postinstall": "typings install && jspm install",
     "tsc": "tsc",
@@ -31,7 +31,8 @@
       "ng2-toastr": "npm:ng2-toastr@^1.1.0",
       "reflect-metadata": "npm:reflect-metadata@^0.1.8",
       "rxjs": "npm:rxjs@5.0.0-beta.12",
-      "underscore": "npm:underscore@^1.8.3"
+      "underscore": "npm:underscore@^1.8.3",
+      "zone.js": "npm:zone.js@0.6.25"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",

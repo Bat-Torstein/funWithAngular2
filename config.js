@@ -53,6 +53,7 @@ System.config({
     "rxjs": "npm:rxjs@5.0.0-beta.12",
     "typescript": "npm:typescript@1.8.10",
     "underscore": "npm:underscore@1.8.3",
+    "zone.js": "npm:zone.js@0.6.25",
     "github:distros/bootstrap-less@3.3.9": {
       "jquery": "github:components/jquery@3.1.1"
     },
