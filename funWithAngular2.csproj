@@ -79,7 +79,6 @@
     <Content Include="karma.cover.conf.js" />
     <Content Include="packages.config" />
     <Content Include="styles.css" />
-    <Content Include="systemjs.config.js" />
     <Content Include="tsconfig.json" />
     <Content Include="app.less" />
     <Content Include="package.json" />
