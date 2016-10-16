@@ -128,7 +128,6 @@
     <TypeScriptCompile Include="tests\overview\overview.spec.ts" />
     <TypeScriptCompile Include="tests\services\item.service.spec.ts" />
     <TypeScriptCompile Include="typings\app.d.ts" />
-    <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
