@@ -31,40 +31,42 @@ System.config({
 
 System.config(
 {
+    defaultJSExtensions: true,
     paths: {
+        'plugin:' : 'jspm_packages/github/systemjs/',
+        'jspm:' : 'jspm_packages/npm/',
         'npm:' : 'node_modules/'
     },
     map: {
         'app': 'app',
         'tests' : 'tests',
-        '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
-        '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
-        '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
-        '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
-        '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
-        '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
-        '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
+        '@angular/core': 'jspm:@angular/core@2.1.0/bundles/core.umd.js',
+        '@angular/common': 'jspm:@angular/common@2.1.0/bundles/common.umd.js',
+        '@angular/compiler': 'jspm:@angular/compiler@2.1.0/bundles/compiler.umd.js',
+        '@angular/platform-browser': 'jspm:@angular/platform-browser@2.1.0/bundles/platform-browser.umd.js',
+        '@angular/platform-browser-dynamic': 'jspm:@angular/platform-browser-dynamic@2.1.0/bundles/platform-browser-dynamic.umd.js',
+        '@angular/forms': 'jspm:@angular/forms@2.1.0/bundles/forms.umd.js',
+        '@angular/router': 'jspm:@angular/router@3.1.0/bundles/router.umd.js',
 
         // angular testing umd bundles
-        '@angular/core/testing': 'npm:@angular/core/bundles/core-testing.umd.js',
-        '@angular/common/testing': 'npm:@angular/common/bundles/common-testing.umd.js',
-        '@angular/compiler/testing': 'npm:@angular/compiler/bundles/compiler-testing.umd.js',
-        '@angular/platform-browser/testing': 'npm:@angular/platform-browser/bundles/platform-browser-testing.umd.js',
-        '@angular/platform-browser-dynamic/testing': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
+        '@angular/core/testing': 'jspm:@angular/core@2.1.0/bundles/core-testing.umd.js',
+        '@angular/common/testing': 'jspm:@angular/common@2.1.0/bundles/common-testing.umd.js',
+        '@angular/compiler/testing': 'jspm:@angular/compiler@2.1.0/bundles/compiler-testing.umd.js',
+        '@angular/platform-browser/testing': 'jspm:@angular/platform-browser@2.1.0/bundles/platform-browser-testing.umd.js',
+        '@angular/platform-browser-dynamic/testing': 'jspm:@angular/platform-browser-dynamic@2.1.0/bundles/platform-browser-dynamic-testing.umd.js',
+
+        // JSPM related
+        'process': 'jspm:process@0.11.9/index.js',
+        'text': 'plugin:plugin-text@0.0.9/text.js',
 
         // other libraries
-        'rxjs': 'npm:rxjs',
-        'underscore': 'npm:underscore/underscore.js',
-        'ng2-modal': 'npm:ng2-modal',
-        'ng2-toastr' : 'npm:ng2-toastr'
+        'rxjs': 'jspm:rxjs@5.0.0-beta.12',
+        'underscore': 'jspm:underscore@1.8.3/underscore.js',
+        'ng2-modal': 'jspm:ng2-modal@0.0.20/index.js',
+        'ng2-toastr': 'jspm:ng2-toastr@1.2.0',
     },
     packages: {
-        'app': { defaultExtension: 'js' },
-        'tests': { defaultExtension: 'js' },
-        'rxjs': {defaultExtension: 'js'},
-        'underscore': {defaultExtension: 'js' },
-        'ng2-modal': { main: 'index.js', defaultExtension: 'js' },
-        'ng2-toastr': { main: 'ng2-toastr.js', defaultExtension: 'js' }
+        'ng2-toastr': { main: 'ng2-toastr.js' }
     }
 });
 
