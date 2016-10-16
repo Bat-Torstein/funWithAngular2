@@ -1,15 +1,34 @@
 System.config({
   defaultJSExtensions: true,
-  transpiler: "babel",
-  babelOptions: {
-    "optional": [
-      "runtime",
-      "optimisation.modules.system"
-    ]
+  transpiler: "typescript",
+  typescriptOptions: {
+    "module": "commonjs",
+    "target": "es5",
+    "typeCheck": true,
+    "tsconfig": true,
+    "sourceMap": true,
+    "typings": {
+      "@angular/core": "index.d.ts",
+      "@angular/common": "index.d.ts",
+      "@angular/compiler": "index.d.ts",
+      "@angular/platform-browser": "index.d.ts",
+      "@angular/platform-browser-dynamic": "index.d.ts",
+      "rxjs": "Rx.d.ts",
+      "": "typings/index.d.ts"
+    }
   },
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
+  },
+
+  packages: {
+    "app": {
+      "main": "main.js"
+    },
+    "ng2-toastr": {
+      "main": "ng2-toastr.js"
+    }
   },
 
   map: {
@@ -27,14 +46,16 @@ System.config({
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "bootstrap": "npm:bootstrap@3.3.7",
-    "core-js": "npm:core-js@2.4.1",
+    "bootstrap-less": "github:distros/bootstrap-less@3.3.9",
     "ng2-modal": "npm:ng2-modal@0.0.20",
     "ng2-toastr": "npm:ng2-toastr@1.2.0",
     "reflect-metadata": "npm:reflect-metadata@0.1.8",
     "rxjs": "npm:rxjs@5.0.0-beta.12",
-    "systemjs": "npm:systemjs@0.19.39",
+    "typescript": "npm:typescript@1.8.10",
     "underscore": "npm:underscore@1.8.3",
-    "zone.js": "npm:zone.js@0.6.25",
+    "github:distros/bootstrap-less@3.3.9": {
+      "jquery": "github:components/jquery@3.1.1"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -49,6 +70,9 @@ System.config({
     },
     "github:jspm/nodelibs-events@0.1.1": {
       "events": "npm:events@1.0.2"
+    },
+    "github:jspm/nodelibs-os@0.1.0": {
+      "os-browserify": "npm:os-browserify@0.1.2"
     },
     "github:jspm/nodelibs-path@0.1.0": {
       "path-browserify": "npm:path-browserify@0.0.0"
@@ -227,12 +251,6 @@ System.config({
     "npm:constants-browserify@0.0.1": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
-    "npm:core-js@2.4.1": {
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "path": "github:jspm/nodelibs-path@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
-    },
     "npm:core-util-is@1.0.2": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
@@ -314,6 +332,9 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2",
       "zlib": "github:jspm/nodelibs-zlib@0.1.0"
+    },
+    "npm:os-browserify@0.1.2": {
+      "os": "github:jspm/nodelibs-os@0.1.0"
     },
     "npm:pako@0.2.9": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -404,15 +425,11 @@ System.config({
     "npm:string_decoder@0.10.31": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
-    "npm:systemjs@0.19.39": {
-      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "systemjs-json": "github:systemjs/plugin-json@0.1.2",
-      "when": "npm:when@3.7.7"
-    },
     "npm:timers-browserify@1.4.2": {
       "process": "npm:process@0.11.9"
+    },
+    "npm:typescript@1.8.10": {
+      "os": "github:jspm/nodelibs-os@0.1.0"
     },
     "npm:util-deprecate@1.0.2": {
       "util": "github:jspm/nodelibs-util@0.1.0"
@@ -423,9 +440,6 @@ System.config({
     },
     "npm:vm-browserify@0.0.4": {
       "indexof": "npm:indexof@0.0.1"
-    },
-    "npm:when@3.7.7": {
-      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:zone.js@0.6.25": {
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",

@@ -10,7 +10,24 @@
     "noImplicitAny": false,
     "baseUrl": ".",
     "paths": {
-      "@angular/*": [ "jspm_packages/npm/@angular/*" ]
+      "@angular/common": [ "jspm_packages/npm/@angular/common@2.1.0" ],
+      "@angular/compiler": [ "jspm_packages/npm/@angular/compiler@2.1.0" ],
+      "@angular/core": [ "jspm_packages/npm/@angular/core@2.1.0" ],
+      "@angular/core/*": [ "jspm_packages/npm/@angular/core@2.1.0/*" ],
+      "@angular/forms": [ "jspm_packages/npm/@angular/forms@2.1.0" ],
+      "@angular/http": [ "jspm_packages/npm/@angular/http@2.1.0" ],
+      "@angular/platform-browser": [ "jspm_packages/npm/@angular/platform-browser@2.1.0" ],
+      "@angular/platform-browser-dynamic": [ "jspm_packages/npm/@angular/platform-browser-dynamic@2.1.0" ],
+      "@angular/router": [ "jspm_packages/npm/@angular/router@3.1.0" ],
+      "@angular/router/*": [ "jspm_packages/npm/@angular/router@3.1.0/*" ],
+      "@angular/upgrade": [ "jspm_packages/npm/@angular/upgrade@2.1.0" ],
+      "@angular2-material/progress-circle": [ "jspm_packages/npm/@angular2-material/progress-circle@2.0.0-alpha.8-experimental3" ],
+      "ng2-modal": [ "jspm_packages/npm/ng2-modal@0.0.20" ],
+      "ng2-toastr": [ "jspm_packages/npm/ng2-toastr@1.2.0" ],
+      "ng2-toastr/*": [ "jspm_packages/npm/ng2-toastr@1.2.0/*" ],
+      "rxjs": [ "jspm_packages/npm/rxjs@5.0.0-beta.12" ],
+      "rxjs/*": [ "jspm_packages/npm/rxjs@5.0.0-beta.12/*" ],
+      "underscore": [ "jspm_packages/npm/underscore@1.8.3" ]
     }
   },
   "compileOnSave": true,

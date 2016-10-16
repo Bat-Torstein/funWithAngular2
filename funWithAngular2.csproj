@@ -70,6 +70,7 @@
     <Content Include="app\dialogs\confirmdialog.component.html" />
     <Content Include="app\dialogs\textarea.component.html" />
     <Content Include="app\overview\overview.component.html" />
+    <Content Include="config.js" />
     <Content Include="gruntfile.js" />
     <Content Include="index.html" />
     <Content Include="index_jspm.html" />
