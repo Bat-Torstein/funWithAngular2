@@ -7,7 +7,9 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "baseUrl": "",
+    "paths": { "app": [ "app" ] }
   },
   "compileOnSave": true,
   "include": [
