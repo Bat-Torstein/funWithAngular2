@@ -40,8 +40,8 @@ System.config({
     "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.1.0",
     "@angular/router": "npm:@angular/router@3.1.0",
     "@angular/upgrade": "npm:@angular/upgrade@2.1.0",
-    "@angular2-material/core": "npm:@angular2-material/core@2.0.0-alpha.8-experimental3",
-    "@angular2-material/progress-circle": "npm:@angular2-material/progress-circle@2.0.0-alpha.8-experimental3",
+    "@angular2-material/core": "npm:@angular2-material/core@2.0.0-alpha.8-2",
+    "@angular2-material/progress-circle": "npm:@angular2-material/progress-circle@2.0.0-alpha.8-2",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "bootstrap": "npm:bootstrap@3.3.7",
@@ -145,12 +145,16 @@ System.config({
       "@angular/platform-browser": "npm:@angular/platform-browser@2.1.0",
       "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.1.0"
     },
+    "npm:@angular2-material/core@2.0.0-alpha.8-2": {
+      "@angular/common": "npm:@angular/common@2.1.0",
+      "@angular/core": "npm:@angular/core@2.1.0"
+    },
     "npm:@angular2-material/core@2.0.0-alpha.8-experimental3": {
       "@angular/common": "npm:@angular/common@2.1.0",
       "@angular/core": "npm:@angular/core@2.1.0"
     },
-    "npm:@angular2-material/progress-circle@2.0.0-alpha.8-experimental3": {
-      "@angular2-material/core": "npm:@angular2-material/core@2.0.0-alpha.8-experimental3"
+    "npm:@angular2-material/progress-circle@2.0.0-alpha.8-2": {
+      "@angular2-material/core": "npm:@angular2-material/core@2.0.0-alpha.8-2"
     },
     "npm:asn1.js@4.8.1": {
       "bn.js": "npm:bn.js@4.11.6",
