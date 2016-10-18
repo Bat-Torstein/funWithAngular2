@@ -46,6 +46,7 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "bootstrap": "npm:bootstrap@3.3.7",
     "bootstrap-less": "github:distros/bootstrap-less@3.3.9",
+    "core-js": "npm:core-js@2.4.1",
     "ng2-modal": "npm:ng2-modal@0.0.20",
     "ng2-toastr": "npm:ng2-toastr@1.2.0",
     "reflect-metadata": "npm:reflect-metadata@0.1.8",
@@ -146,10 +147,6 @@ System.config({
       "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.1.0"
     },
     "npm:@angular2-material/core@2.0.0-alpha.8-2": {
-      "@angular/common": "npm:@angular/common@2.1.0",
-      "@angular/core": "npm:@angular/core@2.1.0"
-    },
-    "npm:@angular2-material/core@2.0.0-alpha.8-experimental3": {
       "@angular/common": "npm:@angular/common@2.1.0",
       "@angular/core": "npm:@angular/core@2.1.0"
     },
@@ -254,6 +251,12 @@ System.config({
       "string_decoder": "github:jspm/nodelibs-string_decoder@0.1.0"
     },
     "npm:constants-browserify@0.0.1": {
+      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
+    },
+    "npm:core-js@2.4.1": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
     "npm:core-util-is@1.0.2": {
