@@ -6,13 +6,14 @@
     <md-spinner></md-spinner>
 </div>
 <button class="btn btn-primary" (click)="confirm.open()">TestConfirm</button>
-<button class="btn btn-primary" (click)="attributes.open()">TestAttributes</button>
+<button class="btn btn-primary" (click)="openAttributes()">TestAttributes</button>
 <confirm-dialog 
     #confirm
     title="Confirm" 
     text="Confirm me" 
     (onOk)="userConfirms()">
 </confirm-dialog>
-<attribute-dialog 
-    #attributes>
+<attribute-dialog>
 </attribute-dialog>
+
+<span>The attributes form is {{attributeForm.isValid()}}</span>
