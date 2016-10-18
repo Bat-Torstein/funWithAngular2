@@ -1,4 +1,5 @@
 ﻿import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ToastsManager } from 'ng2-toastr';
 import { Modal } from 'ng2-modal';
 import { AttributeModel } from './attributemodel';
@@ -10,6 +11,7 @@ import template from './attributedialog.component.html!text';
 })
 export class AttributeDialogComponent {
     @ViewChild(Modal) modal: Modal;
+    @ViewChild(NgForm) form: NgForm;
    
     attributes: AttributeModel[];
 
@@ -37,5 +39,12 @@ export class AttributeDialogComponent {
     save() {
        this.toastsManager.success("Jau!");
        this.modal.close();
+    }
+
+    isValid() {
+        if (this.form) {
+            return this.form.valid ? "Valid" : "Not Valid!";
+        }
+        return "";
     }
 } 

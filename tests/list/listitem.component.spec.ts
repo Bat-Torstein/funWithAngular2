@@ -1,7 +1,7 @@
 ﻿import { inject, TestBed, async, ComponentFixture } from '@angular/core/testing';
-import { ListItemComponent } from '../../app/list/listitem.component';
-import { TreeSelector } from '../../app/list/treeselector';
-import { Item } from '../../app/models/item';
+import { ListItemComponent } from 'app/list/listitem.component';
+import { TreeSelector } from 'app/list/treeselector';
+import { Item } from 'app/models/item';
 
 describe('ListItemComponent', () => {
     let itemWithChildren = new Item(1, "withChildren");
