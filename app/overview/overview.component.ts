@@ -19,4 +19,12 @@ export class OverviewComponent {
     openAttributes() {
         this.attributeForm.open();
     }
+
+    refresh() {
+        this.toastsManager.success("Refresh");
+    }
+
+    settings() {
+        this.toastsManager.success("Settings");
+    }
 } 

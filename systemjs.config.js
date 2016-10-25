@@ -15,6 +15,7 @@
 
         '@angular2-material/core' : 'npm:@angular2-material/core/core.umd.js', 
         '@angular2-material/progress-circle': 'npm:@angular2-material/progress-circle/progress-circle.umd.js',
+        '@angular2-material/menu': 'npm:@angular2-material/menu/menu.umd.js',
 
         'underscore': 'npm:underscore/underscore.js',
         'ng2-modal': 'npm:ng2-modal',

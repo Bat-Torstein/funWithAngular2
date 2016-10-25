@@ -7,6 +7,7 @@
 </div>
 <button class="btn btn-primary" (click)="confirm.open()">TestConfirm</button>
 <button class="btn btn-primary" (click)="openAttributes()">TestAttributes</button>
+<button class="btn btn-primary" [md-menu-trigger-for]="menu"><span class="glyphicon glyphicon-cog" style="font-size:larger"></span></button>
 <confirm-dialog 
     #confirm
     title="Confirm" 
@@ -15,5 +16,12 @@
 </confirm-dialog>
 <attribute-dialog>
 </attribute-dialog>
+
+<md-menu #menu="mdMenu">
+    <button md-menu-item (click)="refresh()"> Refresh </button>
+    <button md-menu-item (click)="settings()"> Settings </button>
+    <button md-menu-item> Help </button>
+    <button md-menu-item disabled> Sign Out </button>
+</md-menu>
 
 <span>The attributes form is {{attributeForm.isValid()}}</span>
