@@ -98,7 +98,6 @@
     <TypeScriptCompile Include="app\dialogs\attribute.component.ts" />
     <TypeScriptCompile Include="app\dialogs\attributedialog.component.ts" />
     <TypeScriptCompile Include="app\dialogs\attributemodel.ts" />
-    <TypeScriptCompile Include="app\dialogs\confirmdialog.component.ts" />
     <TypeScriptCompile Include="app\dialogs\index.ts" />
     <TypeScriptCompile Include="app\dialogs\textarea.component.ts" />
     <TypeScriptCompile Include="app\list\index.ts" />
@@ -113,7 +112,6 @@
     <TypeScriptCompile Include="app\models\item.ts" />
     <TypeScriptCompile Include="app\services\mock-items.ts" />
     <TypeScriptCompile Include="tests\common\maptoiterable.spec.ts" />
-    <TypeScriptCompile Include="tests\dialogs\confirmdialog.component.spec.ts" />
     <TypeScriptCompile Include="tests\list\list.component.spec.ts" />
     <TypeScriptCompile Include="tests\list\listitem.component.spec.ts" />
     <TypeScriptCompile Include="tests\list\treeselector.spec.ts" />

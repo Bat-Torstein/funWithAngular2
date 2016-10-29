@@ -5,15 +5,13 @@ import { PipesModule } from './pipes/index';
 import { DialogModule } from './dialogs/index';
 import { ListModule } from './list/index';
 
-import { GrowlModule } from 'primeng/primeng';
-
 import { ItemService } from './services/item.service';
 
 import { AppComponent }  from './app.component';
 import { OverviewComponent } from './overview/overview.component';
 
 @NgModule({
-  imports:      [BrowserModule, PipesModule, DialogModule, ListModule, GrowlModule],
+  imports:      [BrowserModule, PipesModule, DialogModule, ListModule],
   declarations: [AppComponent, OverviewComponent],
   providers:    [ItemService],
   bootstrap:    [AppComponent]

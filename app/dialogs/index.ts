@@ -1,6 +1,6 @@
 ﻿import { NgModule } from '@angular/core';
 import { ModalModule } from 'ng2-modal';
-import { ConfirmDialogComponent } from './confirmdialog.component';
+import { ConfirmDialogModule } from 'primeng/primeng';
 import { AttributeDialogComponent } from './attributedialog.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -10,22 +10,23 @@ import { GrowlModule } from 'primeng/primeng';
 
 @NgModule({
     declarations: [
-        ConfirmDialogComponent,
         AttributeDialogComponent,
         AttributeComponent,
         TextAreaComponent
     ],
     exports: [
-        ConfirmDialogComponent,
         AttributeDialogComponent,
         AttributeComponent,
-        TextAreaComponent
+        TextAreaComponent,
+        GrowlModule,
+        ConfirmDialogModule
     ],
     imports: [
         ModalModule,
         FormsModule,
         CommonModule,
-        GrowlModule
+        GrowlModule,
+        ConfirmDialogModule
     ]
 })
 export class DialogModule { }
