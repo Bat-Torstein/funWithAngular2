@@ -5,10 +5,24 @@ import { TreeSelector } from '../list/treeselector';
 import * as _ from 'underscore';
 
 @Component({
-    moduleId: module.id,
     selector: 'item-list',
-    templateUrl: 'list.component.html',
-    providers: [TreeSelector]
+    providers: [TreeSelector],
+    template: `
+<input #testInput [(ngModel)] = "textValue" (keyup.enter)="upperText()" />
+<span>{{testInput.value}}</span>
+<ul>
+    <li *ngFor = "let item of items">
+        <list-item [item] ="item"></list-item>
+    </li>
+</ul>
+
+<h4>Selected items:</h4>
+<ul>
+    <li *ngFor = "let item of treeSelector.selectedItems | maptoiterable">
+        {{item.name}}
+    </li>
+</ul>
+` 
 })
 export class ListComponent implements OnInit {
     textValue: string;

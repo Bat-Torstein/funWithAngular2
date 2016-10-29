@@ -3,9 +3,22 @@ import { Modal } from 'ng2-modal';
 import { AttributeModel } from './attributemodel';
 
 @Component({
-    moduleId: module.id,
     selector: 'textarea-dialog',
-    templateUrl: 'textarea.component.html'
+    template: `
+<modal [title]="attribute.label"
+       modalClass=""
+       [hideCloseButton]="false"
+       [closeOnEscape]="true"
+       [closeOnOutsideClick]="true">
+    <modal-content>
+
+        <textarea class="col-md-12" rows="10" style="height:auto" [(ngModel)]="attribute.value"></textarea>
+    </modal-content>
+    <modal-footer>
+        <button class="btn btn-default" (click)="close()">Ok</button>
+    </modal-footer>
+</modal>
+`
 })
 export class TextAreaComponent {
     @Input() attribute: AttributeModel;

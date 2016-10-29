@@ -11,7 +11,8 @@
     "test": "karma start karma.conf.js",
     "remap-istanbul": "remap-istanbul -i ./report/coverage/coverage-final.json -o ./report/coverage/html-report -t html",
     "testcover": "karma start karma.cover.conf.js && npm run remap-istanbul",
-    "lint": "node_modules/.bin/tslint -c tslint.json **/*.ts -e node_modules/**/*.ts"
+    "lint": "node_modules/.bin/tslint -c tslint.json **/*.ts -e node_modules/**/*.ts",
+    "pack": "node_modules/.bin/webpack"
   },
   "license": "ISC",
   "dependencies": {
@@ -55,12 +56,15 @@
     "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
+    "hammerjs": "^2.0.8",
+    "html-loader": "^0.4.4",
     "karma-phantomjs2-launcher": "^0.5.0",
     "less": "^2.7.1",
     "lite-server": "^2.2.0",
     "reflect-metadata": "^0.1.8",
     "tslint": "^3.15.1",
-    "typescript": "^2.0.3",
-    "typings": "^1.3.2"
+    "typescript": "^2.0.6",
+    "typings": "^1.3.2",
+    "webpack": "^1.13.3"
   }
 }

@@ -2,12 +2,32 @@
 import { NgForm } from '@angular/forms';
 import { ToastsManager } from 'ng2-toastr';
 import { Modal } from 'ng2-modal';
-import { AttributeModel} from './attributemodel';
+import { AttributeModel } from './attributemodel';
 
 @Component({
-    moduleId: module.id,
     selector: 'attribute-dialog',
-    templateUrl: 'attributedialog.component.html'
+    template: `
+<modal title="Attributes"
+       modalClass="modal-lg"
+       [hideCloseButton]="false"
+       [closeOnEscape]="false"
+       [closeOnOutsideClick]="false">
+    <modal-content>
+        <form #form="ngForm">
+            <table class="table">
+                <thead><tr><th>Attribute name</th><th>Attribute value</th></tr></thead>
+                <tbody>
+                    <tr attribute-row *ngFor="let attribute of attributes" [name]="attribute.name" [ngModel]="attribute"></tr>
+                </tbody>
+            </table>
+        </form>           
+    </modal-content>
+    <modal-footer>
+        <button class="btn btn-default" (click)="cancel()">Cancel</button>
+        <button class="btn btn-primary" (click)="save()" type="submit" [disabled]="!form.valid">Ok</button>
+    </modal-footer>
+</modal>
+`
 })
 export class AttributeDialogComponent {
     @ViewChild(Modal) modal: Modal;

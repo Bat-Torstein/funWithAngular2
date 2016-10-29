@@ -12,9 +12,7 @@ import { Item } from '../models/item';
 import { TreeSelector } from './treeselector';
 
 @Component({
-    moduleId: module.id,
     selector: 'list-item',
-    templateUrl: 'listitem.component.html',
     animations: [
         trigger('appear', [
             state('in', style({ transform: 'translateY(0)'})),
@@ -26,7 +24,17 @@ import { TreeSelector } from './treeselector';
                 animate(100, style({ transform: 'translateY(100%)' }))
             ])
         ])
-    ]
+    ], template: `
+<span class='glyphicon' [class.glyphicon-plus] = 'canOpen()' [class.glyphicon-minus] = "canClose()" [class.selected] = "isSelected()" (click)="onClick($event)"> {{item.name }}</span>
+<div *ngIf = "open">
+    <ul>
+        <li *ngFor = "let child of item.children" [@appear]="'in'">
+            <list-item [item]="child"></list-item>
+        </li>
+    </ul>
+</div>
+
+` 
 })
 export class ListItemComponent {
     @Input() item: Item;

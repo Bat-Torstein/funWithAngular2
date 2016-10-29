@@ -2,9 +2,24 @@
 import { Modal } from 'ng2-modal';
 
 @Component({
-    moduleId: module.id,
     selector: 'confirm-dialog',
-    templateUrl: 'confirmdialog.component.html'
+    template: `
+<modal title="{{title}}"
+       modalClass="modal-sm" 
+       [hideCloseButton]="false" 
+       [closeOnEscape]="false"
+       [closeOnOutsideClick]="false">
+    <modal-content>
+        <div>
+        {{text}}
+        </div>
+    </modal-content>
+    <modal-footer>
+        <button class="btn btn-default" (click)="cancel()">Cancel</button>
+        <button class="btn btn-primary" (click)="confirm()">Ok</button>
+    </modal-footer>
+</modal>
+`
 })
 export class ConfirmDialogComponent {
     @Input() title: string;

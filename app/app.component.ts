@@ -3,9 +3,8 @@ import { OverviewComponent } from './overview/overview.component';
 import { ItemService } from './services/item.service';
 
 @Component({
-    moduleId: module.id,
     selector: 'test-app',
-    templateUrl: 'app.component.html',
+    template: `<app-overview></app-overview>`,
     providers: [ItemService]
 })
 
