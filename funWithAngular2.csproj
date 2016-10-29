@@ -79,6 +79,7 @@
     <Content Include="typings.json" />
     <Content Include="tslint.json" />
     <Content Include="webpack.config.js" />
+    <TypeScriptCompile Include="app\pagenotfound.component.ts" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -95,6 +96,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\demo\demo.component.ts" />
     <TypeScriptCompile Include="app\dialogs\attribute.component.ts" />
     <TypeScriptCompile Include="app\dialogs\attributedialog.component.ts" />
     <TypeScriptCompile Include="app\dialogs\attributemodel.ts" />
@@ -111,6 +113,7 @@
     <TypeScriptCompile Include="app\list\list.component.ts" />
     <TypeScriptCompile Include="app\models\item.ts" />
     <TypeScriptCompile Include="app\services\mock-items.ts" />
+    <TypeScriptCompile Include="app\toolbar\toolbar.component.ts" />
     <TypeScriptCompile Include="tests\common\maptoiterable.spec.ts" />
     <TypeScriptCompile Include="tests\list\list.component.spec.ts" />
     <TypeScriptCompile Include="tests\list\listitem.component.spec.ts" />

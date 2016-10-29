@@ -4,7 +4,14 @@ import { ItemService } from './services/item.service';
 
 @Component({
     selector: 'test-app',
-    template: `<app-overview></app-overview>`,
+    template: `
+<div class="col-xs-12">
+    <toolbar></toolbar>
+</div>
+<div class="col-xs-12">
+    <router-outlet></router-outlet>
+</div>
+`,
     providers: [ItemService]
 })
 
