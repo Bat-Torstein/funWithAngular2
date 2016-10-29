@@ -1,6 +1,5 @@
 ﻿import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ToastsManager } from 'ng2-toastr';
 import { Modal } from 'ng2-modal';
 import { AttributeModel } from './attributemodel';
 
@@ -26,16 +25,17 @@ import { AttributeModel } from './attributemodel';
         <button class="btn btn-default" (click)="cancel()">Cancel</button>
         <button class="btn btn-primary" (click)="save()" type="submit" [disabled]="!form.valid">Ok</button>
     </modal-footer>
+    <p-growl [value]="messages"></p-growl>
 </modal>
 `
 })
 export class AttributeDialogComponent {
     @ViewChild(Modal) modal: Modal;
     @ViewChild(NgForm) form: NgForm;
-   
+    messages = [];
     attributes: AttributeModel[];
 
-    constructor(private toastsManager: ToastsManager) {
+    constructor() {
         this.attributes = [];
         let numeric = new AttributeModel("numeric", "Numeric Attribute", "");
         numeric.validPattern = "^[0-9]+$";
@@ -57,7 +57,7 @@ export class AttributeDialogComponent {
     }
 
     save() {
-       this.toastsManager.success("Jau!");
+       this.messages.push({ severity: 'success', summary: 'Jau'});
        this.modal.close();
     }
 

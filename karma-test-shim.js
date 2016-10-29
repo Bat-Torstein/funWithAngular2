@@ -56,7 +56,7 @@ System.config(
         'rxjs': 'npm:rxjs',
         'underscore': 'npm:underscore/underscore.js',
         'ng2-modal': 'npm:ng2-modal',
-        'ng2-toastr' : 'npm:ng2-toastr'
+        'primeng' : 'npm:primeng'
     },
     packages: {
         'app': { defaultExtension: 'js' },
@@ -64,7 +64,7 @@ System.config(
         'rxjs': {defaultExtension: 'js'},
         'underscore': {defaultExtension: 'js' },
         'ng2-modal': { main: 'index.js', defaultExtension: 'js' },
-        'ng2-toastr': { main: 'ng2-toastr.js', defaultExtension: 'js' }
+        'primeng': { main: 'primeng.js', defaultExtension: 'js' }
     }
 });
 

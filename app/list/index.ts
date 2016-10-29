@@ -2,7 +2,7 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { PipesModule } from '../pipes/index';
-import { ToastModule } from 'ng2-toastr';
+import { GrowlModule } from 'primeng/primeng';
 
 import { TreeSelector } from './treeselector';
 import { ListComponent } from './list.component';
@@ -11,7 +11,7 @@ import { ListItemComponent } from './listitem.component';
 @NgModule({
     declarations: [ListItemComponent, ListComponent],
     exports: [ListComponent, ListItemComponent],
-    imports: [FormsModule, ReactiveFormsModule, CommonModule, PipesModule, ToastModule],
+    imports: [FormsModule, ReactiveFormsModule, CommonModule, GrowlModule, PipesModule],
     providers: [TreeSelector]
 })
 export class ListModule { }

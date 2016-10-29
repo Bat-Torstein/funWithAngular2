@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AttributeComponent } from './attribute.component';
 import { TextAreaComponent } from './textarea.component';
+import { GrowlModule } from 'primeng/primeng';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { TextAreaComponent } from './textarea.component';
     imports: [
         ModalModule,
         FormsModule,
-        CommonModule
+        CommonModule,
+        GrowlModule
     ]
 })
 export class DialogModule { }
