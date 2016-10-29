@@ -55,7 +55,6 @@ System.config(
         // other libraries
         'rxjs': 'npm:rxjs',
         'underscore': 'npm:underscore/underscore.js',
-        'ng2-modal': 'npm:ng2-modal',
         'primeng' : 'npm:primeng'
     },
     packages: {
@@ -63,7 +62,6 @@ System.config(
         'tests': { defaultExtension: 'js' },
         'rxjs': {defaultExtension: 'js'},
         'underscore': {defaultExtension: 'js' },
-        'ng2-modal': { main: 'index.js', defaultExtension: 'js' },
         'primeng': { main: 'primeng.js', defaultExtension: 'js' }
     }
 });

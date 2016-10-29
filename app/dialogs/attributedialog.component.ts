@@ -1,38 +1,31 @@
 ﻿import { Component, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Modal } from 'ng2-modal';
 import { AttributeModel } from './attributemodel';
 
 @Component({
     selector: 'attribute-dialog',
     template: `
-<modal title="Attributes"
-       modalClass="modal-lg"
-       [hideCloseButton]="false"
-       [closeOnEscape]="false"
-       [closeOnOutsideClick]="false">
-    <modal-content>
-        <form #form="ngForm">
-            <table class="table">
-                <thead><tr><th>Attribute name</th><th>Attribute value</th></tr></thead>
-                <tbody>
-                    <tr attribute-row *ngFor="let attribute of attributes" [name]="attribute.name" [ngModel]="attribute"></tr>
-                </tbody>
-            </table>
-        </form>           
-    </modal-content>
-    <modal-footer>
-        <button class="btn btn-default" (click)="cancel()">Cancel</button>
-        <button class="btn btn-primary" (click)="save()" type="submit" [disabled]="!form.valid">Ok</button>
-    </modal-footer>
-    <p-growl [value]="messages"></p-growl>
-</modal>
+<p-dialog [(visible)]="display" header="Attributes" modal="modal" width="800" showEffect="fade">
+    <form #form="ngForm">
+    <table class="table">
+        <thead><tr><th>Attribute name</th><th>Attribute value</th></tr></thead>
+        <tbody>
+            <tr attribute-row *ngFor="let attribute of attributes" [name]="attribute.name" [ngModel]="attribute"></tr>
+        </tbody>
+    </table>
+    </form>           
+    <footer>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            <button class="btn btn-default" (click)="cancel()">Cancel</button>
+            <button class="btn btn-primary" (click)="save()" type="submit" [disabled]="!form.valid">Ok</button>
+        </div>
+    </footer>    
+</p-dialog>
 `
 })
 export class AttributeDialogComponent {
-    @ViewChild(Modal) modal: Modal;
+    @Input() display = false;
     @ViewChild(NgForm) form: NgForm;
-    messages = [];
     attributes: AttributeModel[];
 
     constructor() {
@@ -49,16 +42,15 @@ export class AttributeDialogComponent {
     }
 
     open() {
-        this.modal.open();
+        this.display = true;
     }
 
     cancel() {
-        this.modal.close();
+        this.display = false;
     }
 
     save() {
-       this.messages.push({ severity: 'success', summary: 'Jau'});
-       this.modal.close();
+       this.cancel();
     }
 
     isValid() {
