@@ -4,6 +4,7 @@ module.exports = function (grunt) {
     // load all grunt tasks
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.initConfig({
         watch: {
@@ -25,6 +26,22 @@ module.exports = function (grunt) {
                     "styles.css": "app.less"
                 }
             },
+        },
+        copy: {
+            main: {
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: [
+                            'node_modules/core-js/client/shim.min.js',
+                            'node_modules/zone.js/dist/zone.js'
+                        ],
+                        dest: 'dist/',
+                        filter: 'isFile'
+                    }
+                ]
+            }
         }
     });
     // the default task (running "grunt" in console) is "watch"

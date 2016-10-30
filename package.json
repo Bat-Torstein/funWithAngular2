@@ -12,7 +12,8 @@
     "remap-istanbul": "remap-istanbul -i ./report/coverage/coverage-final.json -o ./report/coverage/html-report -t html",
     "testcover": "karma start karma.cover.conf.js && npm run remap-istanbul",
     "lint": "node_modules/.bin/tslint -c tslint.json **/*.ts -e node_modules/**/*.ts",
-    "pack": "node_modules/.bin/webpack"
+    "build": "node_modules/.bin/grunt copy && npm run pack",
+    "pack": "node_modules/.bin/webpack --progress"
   },
   "license": "ISC",
   "dependencies": {
