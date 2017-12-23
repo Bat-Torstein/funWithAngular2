@@ -1,11 +1,12 @@
-﻿import { Component, OnInit } from '@angular/core';
-import { ItemService } from '../services/item.service'
-import { Item } from '../models/item'
-import { TreeSelector } from '../list/treeselector';
-import * as _ from 'underscore';
+import { Component, OnInit } from "@angular/core";
+
+import * as _ from "underscore";
+import { TreeSelector } from "../list/treeselector";
+import { Item } from "../models/item";
+import { ItemService } from "../services/item.service";
 
 @Component({
-    selector: 'item-list',
+    selector: "item-list",
     providers: [TreeSelector],
     template: `
 <input #testInput [(ngModel)] = "textValue" (keyup.enter)="upperText()" />
@@ -22,25 +23,27 @@ import * as _ from 'underscore';
         {{item.name}}
     </li>
 </ul>
-` 
+`,
 })
 export class ListComponent implements OnInit {
-    textValue: string;
-    items: Item[];
+    private textValue: string;
+    private items: Item[];
 
     constructor(private itemService: ItemService, private treeSelector: TreeSelector) {
     }
 
-    getItems() {
-        this.itemService.getItems().then(items => this.items = items);
+    public getItems() {
+        this.itemService.getItems().subscribe(
+            (item) => this.items = [item],
+            (error) => console.error(error));
     }
 
-    ngOnInit() {
+    public ngOnInit() {
         this.getItems();
-        var test = _.random(0, 100);
+        const test = _.random(0, 100);
     }
 
-    upperText() {
+    public upperText() {
         this.textValue = this.textValue.toUpperCase();
     }
-} 
+}

@@ -25,7 +25,8 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -64,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\systemjs.config.js" />
     <Content Include="gruntfile.js" />
     <Content Include="index.html" />
     <Content Include="index_prod.html" />
@@ -79,6 +81,9 @@
     <Content Include="typings.json" />
     <Content Include="tslint.json" />
     <Content Include="webpack.config.js" />
+    <TypeScriptCompile Include="app\dialogs\dialog.module.ts" />
+    <TypeScriptCompile Include="app\list\list.component.spec.ts" />
+    <TypeScriptCompile Include="app\overview\overview.spec.ts" />
     <TypeScriptCompile Include="app\pagenotfound.component.ts" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -100,26 +105,20 @@
     <TypeScriptCompile Include="app\dialogs\attribute.component.ts" />
     <TypeScriptCompile Include="app\dialogs\attributedialog.component.ts" />
     <TypeScriptCompile Include="app\dialogs\attributemodel.ts" />
-    <TypeScriptCompile Include="app\dialogs\index.ts" />
     <TypeScriptCompile Include="app\dialogs\textarea.component.ts" />
-    <TypeScriptCompile Include="app\list\index.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\list\treeselector.ts" />
     <TypeScriptCompile Include="app\overview\overview.component.ts" />
-    <TypeScriptCompile Include="app\pipes\index.ts" />
+    <TypeScriptCompile Include="app\pipes\maptoiterable.spec.ts" />
     <TypeScriptCompile Include="app\pipes\maptoiterable.ts" />
+    <TypeScriptCompile Include="app\pipes\pipes.module.ts" />
+    <TypeScriptCompile Include="app\services\item.service.spec.ts" />
     <TypeScriptCompile Include="app\services\item.service.ts" />
     <TypeScriptCompile Include="app\list\listitem.component.ts" />
     <TypeScriptCompile Include="app\list\list.component.ts" />
     <TypeScriptCompile Include="app\models\item.ts" />
     <TypeScriptCompile Include="app\services\mock-items.ts" />
     <TypeScriptCompile Include="app\toolbar\toolbar.component.ts" />
-    <TypeScriptCompile Include="tests\common\maptoiterable.spec.ts" />
-    <TypeScriptCompile Include="tests\list\list.component.spec.ts" />
-    <TypeScriptCompile Include="tests\list\listitem.component.spec.ts" />
-    <TypeScriptCompile Include="tests\list\treeselector.spec.ts" />
-    <TypeScriptCompile Include="tests\overview\overview.spec.ts" />
-    <TypeScriptCompile Include="tests\services\item.service.spec.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
   <ItemGroup>

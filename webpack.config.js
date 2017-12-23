@@ -8,7 +8,13 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.html$/, loader: "html" }
+            { test: /\.html$/, loader: "html" },
+		    { 	
+				test: /\.es6$/, 
+				exclude: /node_modules/, 
+				loader: "babel-loader", 
+				query: { presets: ["es2015"] }
+			}
         ]
     },
     plugins: [
@@ -17,3 +23,4 @@ module.exports = {
         })
     ]
 };
+

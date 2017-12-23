@@ -25,7 +25,6 @@
           { pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: false },
           { pattern: 'node_modules/underscore/**/*.js', included: false, watched: false },
           { pattern: 'node_modules/primeng/**/*.js', included: false, watched: false },
-          { pattern: 'tests/**/*.js', included: false, watched: true },
           { pattern: 'app/*.js', included: false, watched: true },
           { pattern: 'app/**/*.js', included: false, watched: true },
 

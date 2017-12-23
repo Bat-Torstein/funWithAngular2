@@ -1,3 +1,3 @@
-# funWithAngular2
+# funWithAngular2+
 
-Playground/testing area for ANgular2
+Playground/testing area for Angular

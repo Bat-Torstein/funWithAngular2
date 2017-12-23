@@ -1,7 +1,7 @@
-﻿export class Item {
-    id: number;
-    name: string;
-    children: Item[];
+export class Item {
+    public id: number;
+    public name: string;
+    public children: Item[];
 
     constructor(id: number, name: string) {
         this.id = id;

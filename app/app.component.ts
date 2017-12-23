@@ -1,9 +1,9 @@
-﻿import { Component } from '@angular/core';
-import { OverviewComponent } from './overview/overview.component';
-import { ItemService } from './services/item.service';
+import { Component } from "@angular/core";
+import { OverviewComponent } from "./overview/overview.component";
+import { ItemService } from "./services/item.service";
 
 @Component({
-    selector: 'test-app',
+    selector: "test-app",
     template: `
 <div class="col-xs-12">
     <toolbar></toolbar>
@@ -12,7 +12,7 @@ import { ItemService } from './services/item.service';
     <router-outlet></router-outlet>
 </div>
 `,
-    providers: [ItemService]
+    providers: [ItemService],
 })
 
-export class AppComponent { } 
+export class AppComponent { }

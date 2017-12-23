@@ -1,21 +1,20 @@
-﻿import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { Routes, RouterModule } from '@angular/router';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { RouterModule, Routes } from "@angular/router";
+import { MenuModule } from "primeng/primeng";
 
-import { PipesModule } from './pipes/index';
-import { DialogModule } from './dialogs/index';
-import { ListModule } from './list/index';
-import { MenuModule } from 'primeng/primeng';
+import { DialogModule } from "./dialogs/dialog.module";
+import { ListModule } from "./list/list.module";
+import { PipesModule } from "./pipes/pipes.module";
 
-import { ItemService } from './services/item.service';
+import { AppComponent } from "./app.component";
+import { DemoComponent } from "./demo/demo.component";
+import { OverviewComponent } from "./overview/overview.component";
+import { PageNotFoundComponent } from "./pagenotfound.component";
+import { ItemService } from "./services/item.service";
+import { ToolbarComponent } from "./toolbar/toolbar.component";
 
-import { OverviewComponent } from './overview/overview.component';
-import { DemoComponent } from './demo/demo.component';
-import { PageNotFoundComponent } from './pagenotfound.component';
-
-import { ToolbarComponent } from './toolbar/toolbar.component'
-import { AppComponent }  from './app.component';
 @NgModule({
     imports: [
         BrowserModule,
@@ -24,27 +23,27 @@ import { AppComponent }  from './app.component';
         ListModule,
         MenuModule,
         RouterModule.forRoot([
-            { path: 'overview', component: OverviewComponent },
-            { path: 'demo', component: DemoComponent },
-            { path: '', component: OverviewComponent },
-            { path: '**', component: PageNotFoundComponent }
-        ])
+            { path: "overview", component: OverviewComponent },
+            { path: "demo", component: DemoComponent },
+            { path: "", component: OverviewComponent },
+            { path: "**", component: PageNotFoundComponent },
+        ]),
     ],
     declarations: [
         AppComponent,
         ToolbarComponent,
         OverviewComponent,
         DemoComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
     ],
 
     providers: [
         ItemService,
-        { provide: LocationStrategy, useClass: HashLocationStrategy }
+        { provide: LocationStrategy, useClass: HashLocationStrategy },
     ],
 
     bootstrap: [
-        AppComponent
-    ]
+        AppComponent,
+    ],
 })
 export class AppModule { }

@@ -1,8 +1,8 @@
-﻿import { Component, Input, ViewChild } from '@angular/core';
-import { AttributeModel } from './attributemodel';
+import { Component, Input, ViewChild } from "@angular/core";
+import { AttributeModel } from "./attributemodel";
 
 @Component({
-    selector: 'textarea-dialog',
+    selector: "textarea-dialog",
     template: `
 <p-dialog [(visible)]="display" [header]="attribute.label" width="800">
     <header>
@@ -15,17 +15,17 @@ import { AttributeModel } from './attributemodel';
         </div>
     </footer>
 </p-dialog>
-`
+`,
 })
 export class TextAreaComponent {
-    @Input() attribute: AttributeModel;
-    @Input() display=false;
+    @Input() public attribute: AttributeModel;
+    @Input() public display = false;
 
-    open() {
+    public open() {
         this.display = true;
     }
 
-    close() {
+    public close() {
         this.display = false;
     }
-} 
+}

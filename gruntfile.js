@@ -5,6 +5,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.initConfig({
         watch: {
@@ -42,7 +43,8 @@ module.exports = function (grunt) {
                     }
                 ]
             }
-        }
+        },
+		clean: ['app/*.js', 'app/*.js.map', 'app/**/*.js', 'app/**/*.js.map' ]
     });
     // the default task (running "grunt" in console) is "watch"
     grunt.registerTask('default', ['watch']);

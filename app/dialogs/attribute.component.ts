@@ -1,20 +1,20 @@
-﻿import { Component, Input, forwardRef} from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR, NG_VALIDATORS, FormControl} from '@angular/forms';
-import { AttributeModel } from './attributemodel';
+import { Component, forwardRef, Input } from "@angular/core";
+import { ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR } from "@angular/forms";
+import { AttributeModel } from "./attributemodel";
 
 @Component({
-    selector: '[attribute-row]',
+    selector: "[attribute-row]",
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,
             useExisting: forwardRef(() => AttributeComponent),
-            multi: true
+            multi: true,
         },
         {
             provide: NG_VALIDATORS,
             useExisting: forwardRef(() => AttributeComponent),
-            multi: true
-        }
+            multi: true,
+        },
     ],
     template: `
 <td>
@@ -32,25 +32,34 @@ import { AttributeModel } from './attributemodel';
         #textarea
         [attribute]="attribute">
 </textarea-dialog>
-`
+`,
 })
 export class AttributeComponent implements ControlValueAccessor {
-    onChange = (_: any) => { };
-    onTouched = (_: any) => { };
-    attribute = new AttributeModel("","","");
+    public attribute = new AttributeModel("", "", "");
 
-    writeValue(value: any) {
+    public onChange = (_: any) => {/**/};
+    public onTouched = (_: any) => {/**/};
+
+    public writeValue(value: any) {
         if (value) {
             this.attribute = value;
         }
     }
 
-    registerOnChange(fn) {
+    public registerOnChange(fn) {
         this.onChange = fn;
     }
 
-    registerOnTouched(fn) {
+    public registerOnTouched(fn) {
         this.onTouched = fn;
+    }
+
+    public validate(c: FormControl) {
+        if (this.attribute.isValid()) {
+            return null;
+        }
+
+        return "Invalid ";
     }
 
     get attributeLabel() {
@@ -70,12 +79,4 @@ export class AttributeComponent implements ControlValueAccessor {
         this.attribute.value = val;
         this.onChange(this.attribute);
     }
-
-    validate(c: FormControl) {
-        if (this.attribute.isValid()) {
-            return null;
-        }
-
-        return "Invalid ";
-    }
-} 
+}

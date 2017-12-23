@@ -8,14 +8,12 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
+    "noStrictGenericChecks": true,
     "baseUrl": "",
     "paths": { "app": [ "app" ] }
   },
   "compileOnSave": true,
-  "include": [
-    "app/*.ts",
-    "app/**/*.ts",
-    "tests/**/*.ts",
-    "typings/*.ts"
+  "exclude": [
+    "node_modules"
   ]
 }

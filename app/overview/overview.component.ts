@@ -1,9 +1,9 @@
-﻿import { Component, ViewChild } from '@angular/core';
-import { AttributeDialogComponent } from '../dialogs/attributedialog.component';
-import { ConfirmationService } from 'primeng/primeng';
+import { Component, ViewChild } from "@angular/core";
+import { ConfirmationService } from "primeng/primeng";
+import { AttributeDialogComponent } from "../dialogs/attributedialog.component";
 
 @Component({
-    selector: 'app-overview',
+    selector: "app-overview",
     providers: [ConfirmationService],
     template: `
 <div class="col-md-3" >
@@ -18,25 +18,25 @@ import { ConfirmationService } from 'primeng/primeng';
 
 <span>The attributes form is {{attributeForm.isValid()}}</span>
 <p-growl [value]="messages"></p-growl>
-`
+`,
 })
 export class OverviewComponent {
-    @ViewChild(AttributeDialogComponent) attributeForm : AttributeDialogComponent;
-    messages = [];
+    @ViewChild(AttributeDialogComponent) public attributeForm: AttributeDialogComponent;
+    private messages = [];
     constructor(private confirmationService: ConfirmationService) {}
 
-    userConfirms() {
-        this.messages.push({ severity: 'success', summary: 'yay' });
+    public userConfirms() {
+        this.messages.push({ severity: "success", summary: "yay" });
     }
 
-    openAttributes() {
+    public openAttributes() {
         this.attributeForm.open();
     }
 
-    openConfirm() {
+    public openConfirm() {
         this.confirmationService.confirm({
-            message: 'Confirm this?',
-            accept: () => this.userConfirms()
+            message: "Confirm this?",
+            accept: () => this.userConfirms(),
         });
     }
-} 
+}

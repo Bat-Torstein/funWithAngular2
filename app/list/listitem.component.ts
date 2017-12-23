@@ -1,31 +1,38 @@
-﻿import { 
+import {
+    animate,
     Component,
+    EventEmitter,
     Input,
     Output,
-    EventEmitter,
-    trigger,
     state,
     style,
     transition,
-    animate } from '@angular/core';
-import { Item } from '../models/item';
-import { TreeSelector } from './treeselector';
+    trigger } from "@angular/core";
+import { Item } from "../models/item";
+import { TreeSelector } from "./treeselector";
 
 @Component({
-    selector: 'list-item',
+    selector: "list-item",
     animations: [
-        trigger('appear', [
-            state('in', style({ transform: 'translateY(0)'})),
-            transition('void => *', [
-                style({ transform: 'rotate(300deg)' }),
-                animate(100)
+        trigger("appear", [
+            state("in", style({ transform: "translateY(0)"})),
+            transition("void => *", [
+                style({ transform: "rotate(300deg)" }),
+                animate(100),
             ]),
-            transition('* => void', [
-                animate(100, style({ transform: 'translateY(100%)' }))
-            ])
-        ])
-    ], template: `
-<span class='glyphicon' [class.glyphicon-plus] = 'canOpen()' [class.glyphicon-minus] = "canClose()" [class.selected] = "isSelected()" (click)="onClick($event)"> {{item.name }}</span>
+            transition("* => void", [
+                animate(100, style({ transform: "translateY(100%)" })),
+            ]),
+        ]),
+    ],
+    template: `
+<span class='glyphicon'
+    [class.glyphicon-plus]='canOpen()'
+    [class.glyphicon-minus]="canClose()"
+    [class.selected]="isSelected()"
+    (click)="onClick($event)">
+        {{item.name }}
+</span>
 <div *ngIf = "open">
     <ul>
         <li *ngFor = "let child of item.children" [@appear]="'in'">
@@ -34,29 +41,29 @@ import { TreeSelector } from './treeselector';
     </ul>
 </div>
 
-` 
+`,
 })
 export class ListItemComponent {
-    @Input() item: Item;
-    open: boolean;
+    @Input() private item: Item;
+    private open: boolean;
 
-    constructor(private treeSelector : TreeSelector) {
+    constructor(private treeSelector: TreeSelector) {
         this.open = false;
     }
 
-    canOpen() {
+    public canOpen() {
         return this.item.children && this.item.children.length && !this.open;
     }
 
-    canClose() {
+    public canClose() {
         return this.item.children && this.item.children.length && this.open;
     }
 
-    isSelected() {
+    public isSelected() {
         return this.treeSelector.isSelected(this.item.id);
     }
 
-    onClick(event: MouseEvent) {
+    public onClick(event: MouseEvent) {
         if (this.item.children && this.item.children.length) {
             this.open = !this.open;
         }
@@ -66,4 +73,4 @@ export class ListItemComponent {
             this.treeSelector.singleSelect(this.item);
         }
     }
-} 
+}
