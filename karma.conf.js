@@ -37,18 +37,19 @@
             // required for component assests fetched by Angular's compiler
             "/app/": "/base/app/"
         },
-
-        phantomjsLauncher: {
-            // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom) 
-            exitOnResourceError: true
-        },
+		
+		nightmareOptions: {
+			width: 800,
+			height: 600,
+			show: false,
+		},
 
         reporters: ['progress'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['Chrome'],
+        browsers: ['Nightmare'],
         singleRun: false
     })
 }
