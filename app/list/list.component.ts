@@ -26,8 +26,8 @@ import { ItemService } from "../services/item.service";
 `,
 })
 export class ListComponent implements OnInit {
-    private textValue: string;
-    private items: Item[];
+    public textValue: string;
+    public items: Item[];
 
     constructor(private itemService: ItemService, private treeSelector: TreeSelector) {
     }

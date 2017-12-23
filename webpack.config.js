@@ -1,4 +1,5 @@
 ﻿var webpack = require('webpack');
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 
 module.exports = {
     entry: "./app/main.js",
@@ -8,19 +9,11 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.html$/, loader: "html" },
-		    { 	
-				test: /\.es6$/, 
-				exclude: /node_modules/, 
-				loader: "babel-loader", 
-				query: { presets: ["es2015"] }
-			}
+            { test: /\.html$/, loader: "html" }
         ]
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            compress: { warnings: false }
-        })
+		new MinifyPlugin({}, {})
     ]
 };
 
