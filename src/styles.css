@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+ul {
+    list-style: none;   
+}
+
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+
+.scroll-modal-body{
+    height: 600px;
+    overflow-y: auto;
+}
+
+.form-control-expand {
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+}
