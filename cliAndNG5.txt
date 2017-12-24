@@ -1,0 +1,34 @@
+Angular2 to angular-cli and angular5 
+--------------------------------------------------------
+
+npm i -g @angular/cli
+On the project root folder, run ng new tmp
+copy e2e folder 
+copy angular-cli.json
+	- Modify project name
+		
+Copy .editorconfig
+Copy or merge karma.conf.js
+Upgrade and add packages from package.json
+	- Add scripts (can probably remove old scripts too)
+Copy protactor.conf.js
+Copy tsconfig.json
+Copy tslint.json
+Create a new src folder
+	- copy favicon.ico
+	- copy assets folder
+	- Copy environment folder
+	- Create app folder 
+		- app.component (from old)
+		- app.module (from old)
+	- Copy all files from src folder (including main.ts)
+	- Add feature-folders from old project
+	- index.html should not reference anything
+	- Build with ng-serve
+	- Also test ng test
+	- do ng build --prod
+
+
+
+	
+
