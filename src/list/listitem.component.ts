@@ -25,23 +25,7 @@ import { TreeSelector } from "./treeselector";
             ]),
         ]),
     ],
-    template: `
-<span class='glyphicon'
-    [class.glyphicon-plus]='canOpen()'
-    [class.glyphicon-minus]="canClose()"
-    [class.selected]="isSelected()"
-    (click)="onClick($event)">
-        {{item.name }}
-</span>
-<div *ngIf = "open">
-    <ul>
-        <li *ngFor = "let child of item.children" [@appear]="'in'">
-            <list-item [item]="child"></list-item>
-        </li>
-    </ul>
-</div>
-
-`,
+    templateUrl: "listitem.component.html",
 })
 export class ListItemComponent {
     @Input() private item: Item;

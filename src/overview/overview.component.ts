@@ -5,20 +5,7 @@ import { AttributeDialogComponent } from "../dialogs/attributedialog.component";
 @Component({
     selector: "app-overview",
     providers: [ConfirmationService],
-    template: `
-<div class="col-md-3" >
-    <item-list>
-    </item-list>
-</div>
-<button class="btn btn-primary" (click)="openConfirm()">TestConfirm</button>
-<button class="btn btn-primary" (click)="openAttributes()">TestAttributes</button>
-<p-confirmDialog header="Confirmation" icon="fa fa-question-circle" width="425"></p-confirmDialog>
-<attribute-dialog>
-</attribute-dialog>
-
-<span>The attributes form is {{attributeForm.isValid()}}</span>
-<p-growl [value]="messages"></p-growl>
-`,
+    templateUrl: "overview.component.html",
 })
 export class OverviewComponent {
     @ViewChild(AttributeDialogComponent) public attributeForm: AttributeDialogComponent;

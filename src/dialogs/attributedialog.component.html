@@ -1,0 +1,16 @@
+<p-dialog [(visible)]="display" header="Attributes" modal="modal" width="800">
+    <form #form="ngForm">
+    <table class="table">
+        <thead><tr><th>Attribute name</th><th>Attribute value</th></tr></thead>
+        <tbody>
+            <tr attribute-row *ngFor="let attribute of attributes" [name]="attribute.name" [ngModel]="attribute"></tr>
+        </tbody>
+    </table>
+    </form>
+    <footer>
+        <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+            <button class="btn btn-default" (click)="cancel()">Cancel</button>
+            <button class="btn btn-primary" (click)="save()" type="submit" [disabled]="!form.valid">Ok</button>
+        </div>
+    </footer>
+</p-dialog>

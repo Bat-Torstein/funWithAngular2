@@ -1,4 +1,4 @@
-import { NoopAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
@@ -18,7 +18,7 @@ import { ToolbarComponent } from "../toolbar/toolbar.component";
 @NgModule({
     imports: [
         BrowserModule,
-        NoopAnimationsModule,
+        BrowserAnimationsModule,
         PipesModule,
         DialogModule,
         ListModule,

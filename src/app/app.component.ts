@@ -4,14 +4,7 @@ import { ItemService } from "../services/item.service";
 
 @Component({
     selector: "test-app",
-    template: `
-<div class="col-xs-12">
-    <toolbar></toolbar>
-</div>
-<div class="col-xs-12">
-    <router-outlet></router-outlet>
-</div>
-`,
+    templateUrl: "./app.component.html",
     providers: [ItemService],
 })
 

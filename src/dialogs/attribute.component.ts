@@ -16,23 +16,7 @@ import { AttributeModel } from "./attributemodel";
             multi: true,
         },
     ],
-    template: `
-<td>
-    <input [(ngModel)]="attributeLabel" class="form-control" #name="ngModel"/>
-    <div *ngIf="!name.pristine && !attribute.isLabelValid()" class="alert alert-danger">name is required</div>
-</td>
-<td>
-    <div class="has-feedback">
-        <input [(ngModel)]="attributeValue" class="form-control" #attr="ngModel" />
-        <span class="glyphicon glyphicon-fullscreen form-control-expand form-control-feedback" (click)="textarea.open()"></span>
-    </div>
-    <div *ngIf="!attr.pristine && !attribute.isValueValid()" class="alert alert-danger">{{attributeLabel}} is incorrect</div>
-</td>
-<textarea-dialog
-        #textarea
-        [attribute]="attribute">
-</textarea-dialog>
-`,
+    templateUrl: "./attribute.component.html",
 })
 export class AttributeComponent implements ControlValueAccessor {
     public attribute = new AttributeModel("", "", "");
