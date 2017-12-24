@@ -12,7 +12,7 @@ import { TreeSelector } from "./treeselector";
 
 class MockItemService extends ItemService {
     public getItems() {
-        return Observable.from([]);
+        return Observable.of([]);
     }
 }
 

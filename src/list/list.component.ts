@@ -19,7 +19,7 @@ export class ListComponent implements OnInit {
 
     public getItems() {
         this.itemService.getItems().subscribe(
-            (item) => this.items = [item],
+            (items) => this.items = items,
             (error) => console.error(error));
     }
 
