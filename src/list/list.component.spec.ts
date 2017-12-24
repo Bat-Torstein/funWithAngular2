@@ -12,7 +12,7 @@ import { TreeSelector } from "./treeselector";
 
 class MockItemService extends ItemService {
     public getItems() {
-        return Observable.of([]);
+        return Observable.of([new Item(1, "first"), new Item(2, "second")]);
     }
 }
 
@@ -28,13 +28,10 @@ describe("ListComponent", () => {
     }));
 
     it("should display a list of items", () => {
-        TestBed.compileComponents().then(() => {
-            const fixture = TestBed.createComponent(ListComponent);
-            fixture.componentInstance.items = [new Item(1, "first"), new Item(2, "second")];
-            fixture.detectChanges();
-            const compiled = fixture.debugElement.nativeElement;
+        const fixture = TestBed.createComponent(ListComponent);
+        fixture.detectChanges();
+        const compiled = fixture.debugElement.nativeElement;
 
-            expect(compiled.querySelectorAll("li").length).toBe(2);
-        });
+        expect(compiled.querySelectorAll("li").length).toBe(2);
     });
 });
