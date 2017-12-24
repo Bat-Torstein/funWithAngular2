@@ -1,8 +1,8 @@
-import { Component, NO_ERRORS_SCHEMA } from "@angular/core";
-import { async, TestBed } from "@angular/core/testing";
-import { OverviewComponent } from "./overview.component";
+import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
+import { async, TestBed } from '@angular/core/testing';
+import { OverviewComponent } from './overview.component';
 
-describe("OverViewComponent", () => {
+describe('OverViewComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [OverviewComponent],
@@ -11,8 +11,8 @@ describe("OverViewComponent", () => {
         }).compileComponents();
     }));
 
-    it("has itemlist", () => {
+    it('has itemlist', () => {
         const fixture = TestBed.createComponent(OverviewComponent);
-        expect(fixture.debugElement.nativeElement.innerHTML).toContain("item-list");
+        expect(fixture.debugElement.nativeElement.innerHTML).toContain('item-list');
     });
 });

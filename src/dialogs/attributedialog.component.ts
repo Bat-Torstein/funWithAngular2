@@ -1,10 +1,10 @@
-import { Component, EventEmitter, Input, Output, ViewChild } from "@angular/core";
-import { NgForm } from "@angular/forms";
-import { AttributeModel } from "./attributemodel";
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { AttributeModel } from './attributemodel';
 
 @Component({
-    selector: "attribute-dialog",
-    templateUrl: "attributedialog.component.html",
+    selector: 'app-attribute-dialog',
+    templateUrl: 'attributedialog.component.html',
 })
 export class AttributeDialogComponent {
     @Input() public display = false;
@@ -13,13 +13,13 @@ export class AttributeDialogComponent {
 
     constructor() {
         this.attributes = [];
-        const numeric = new AttributeModel("numeric", "Numeric Attribute", "");
-        numeric.validPattern = "^[0-9]+$";
+        const numeric = new AttributeModel('numeric', 'Numeric Attribute', '');
+        numeric.validPattern = '^[0-9]+$';
         this.attributes.push(numeric);
-        const onlyTextAndNumbers = new AttributeModel("onlyTextAndNumbers", "Only text and numbers", "");
-        onlyTextAndNumbers.validPattern = "^[a-zA-Z0-9]*$";
+        const onlyTextAndNumbers = new AttributeModel('onlyTextAndNumbers', 'Only text and numbers', '');
+        onlyTextAndNumbers.validPattern = '^[a-zA-Z0-9]*$';
         this.attributes.push(onlyTextAndNumbers);
-        const mustHaveValue = new AttributeModel("mustHaveValue", "Must have value", "");
+        const mustHaveValue = new AttributeModel('mustHaveValue', 'Must have value', '');
         mustHaveValue.isRequired = true;
         this.attributes.push(mustHaveValue);
     }
@@ -38,8 +38,8 @@ export class AttributeDialogComponent {
 
     public isValid() {
         if (this.form) {
-            return this.form.valid ? "Valid" : "Not Valid!";
+            return this.form.valid ? 'Valid' : 'Not Valid!';
         }
-        return "";
+        return '';
     }
 }

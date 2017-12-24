@@ -1,31 +1,33 @@
+
 import {
     animate,
-    Component,
-    EventEmitter,
-    Input,
-    Output,
     state,
     style,
     transition,
-    trigger } from "@angular/core";
-import { Item } from "../models/item";
-import { TreeSelector } from "./treeselector";
+    trigger } from '@angular/animations';
+import {
+        Component,
+        EventEmitter,
+        Input,
+        Output } from '@angular/core';
+import { Item } from '../models/item';
+import { TreeSelector } from './treeselector';
 
 @Component({
-    selector: "list-item",
+    selector: 'app-list-item',
     animations: [
-        trigger("appear", [
-            state("in", style({ transform: "translateY(0)"})),
-            transition("void => *", [
-                style({ transform: "rotate(300deg)" }),
+        trigger('appear', [
+            state('in', style({ transform: 'translateY(0)'})),
+            transition('* => *', [
+                style({ transform: 'rotate(300deg)' }),
                 animate(100),
             ]),
-            transition("* => void", [
-                animate(100, style({ transform: "translateY(100%)" })),
+            transition('* => void', [
+                animate(100, style({ transform: 'translateY(100%)' })),
             ]),
         ]),
     ],
-    templateUrl: "listitem.component.html",
+    templateUrl: 'listitem.component.html',
 })
 export class ListItemComponent {
     @Input() private item: Item;

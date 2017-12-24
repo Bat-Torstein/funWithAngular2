@@ -3,7 +3,7 @@
     <table class="table">
         <thead><tr><th>Attribute name</th><th>Attribute value</th></tr></thead>
         <tbody>
-            <tr attribute-row *ngFor="let attribute of attributes" [name]="attribute.name" [ngModel]="attribute"></tr>
+            <tr app-attribute-row *ngFor="let attribute of attributes" [name]="attribute.name" [ngModel]="attribute"></tr>
         </tbody>
     </table>
     </form>

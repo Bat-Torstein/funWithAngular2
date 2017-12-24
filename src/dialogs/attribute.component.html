@@ -9,7 +9,7 @@
     </div>
     <div *ngIf="!attr.pristine && !attribute.isValueValid()" class="alert alert-danger">{{attributeLabel}} is incorrect</div>
 </td>
-<textarea-dialog
+<app-textarea-dialog
         #textarea
         [attribute]="attribute">
-</textarea-dialog>
+</app-textarea-dialog>

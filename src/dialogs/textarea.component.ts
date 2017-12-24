@@ -1,9 +1,9 @@
-import { Component, Input, ViewChild } from "@angular/core";
-import { AttributeModel } from "./attributemodel";
+import { Component, Input, ViewChild } from '@angular/core';
+import { AttributeModel } from './attributemodel';
 
 @Component({
-    selector: "textarea-dialog",
-    templateUrl: "./textarea.component.html",
+    selector: 'app-textarea-dialog',
+    templateUrl: './textarea.component.html',
 })
 export class TextAreaComponent {
     @Input() public attribute: AttributeModel;

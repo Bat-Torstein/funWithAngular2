@@ -1,9 +1,9 @@
-import { Component, forwardRef, Input } from "@angular/core";
-import { ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR } from "@angular/forms";
-import { AttributeModel } from "./attributemodel";
+import { Component, forwardRef, Input } from '@angular/core';
+import { ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { AttributeModel } from './attributemodel';
 
 @Component({
-    selector: "[attribute-row]",
+    selector: '[app-attribute-row]',
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,
@@ -16,10 +16,10 @@ import { AttributeModel } from "./attributemodel";
             multi: true,
         },
     ],
-    templateUrl: "./attribute.component.html",
+    templateUrl: './attribute.component.html',
 })
 export class AttributeComponent implements ControlValueAccessor {
-    public attribute = new AttributeModel("", "", "");
+    public attribute = new AttributeModel('', '', '');
 
     public onChange = (_: any) => {/**/};
     public onTouched = (_: any) => {/**/};
@@ -43,7 +43,7 @@ export class AttributeComponent implements ControlValueAccessor {
             return null;
         }
 
-        return "Invalid ";
+        return 'Invalid ';
     }
 
     get attributeLabel() {

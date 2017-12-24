@@ -1,10 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-import { MenuItem } from "primeng/primeng";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MenuItem } from 'primeng/primeng';
 
 @Component({
-    selector: "toolbar",
-    templateUrl: "./toolbar.component.html",
+    selector: 'app-toolbar',
+    templateUrl: './toolbar.component.html',
 })
 export class ToolbarComponent implements OnInit {
     private messages = [];
@@ -13,31 +13,31 @@ export class ToolbarComponent implements OnInit {
     constructor(private router: Router) {}
 
     public navigateOverview() {
-        this.router.navigate(["overview"]);
+        this.router.navigate(['overview']);
     }
 
     public navigateDemo() {
-        this.router.navigate(["demo"]);
+        this.router.navigate(['demo']);
     }
 
     public login() {
-        this.messages.push({ severity: "success", summary: "Logged in" });
+        this.messages.push({ severity: 'success', summary: 'Logged in' });
     }
 
     public logout() {
-        this.messages.push({ severity: "info", summary: "Logged out" });
+        this.messages.push({ severity: 'info', summary: 'Logged out' });
     }
 
     public ngOnInit() {
         this.menuItems = [
             {
-                label: "Log in",
-                icon: "fa-user-circle-o",
+                label: 'Log in',
+                icon: 'fa-user-circle-o',
                 command: (event) => this.login(),
             },
             {
-                label: "Log out",
-                icon: "fa-user-circle",
+                label: 'Log out',
+                icon: 'fa-user-circle',
                 command: (event) => this.logout(),
             },
         ];

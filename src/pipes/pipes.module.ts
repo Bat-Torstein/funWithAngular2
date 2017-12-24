@@ -1,5 +1,5 @@
-import { NgModule } from "@angular/core";
-import { MapToIterablePipe } from "./maptoiterable";
+import { NgModule } from '@angular/core';
+import { MapToIterablePipe } from './maptoiterable';
 
 @NgModule({
     declarations: [MapToIterablePipe],

@@ -1,11 +1,11 @@
-import { Component, ViewChild } from "@angular/core";
-import { ConfirmationService } from "primeng/primeng";
-import { AttributeDialogComponent } from "../dialogs/attributedialog.component";
+import { Component, ViewChild } from '@angular/core';
+import { ConfirmationService } from 'primeng/primeng';
+import { AttributeDialogComponent } from '../dialogs/attributedialog.component';
 
 @Component({
-    selector: "app-overview",
+    selector: 'app-overview',
     providers: [ConfirmationService],
-    templateUrl: "overview.component.html",
+    templateUrl: 'overview.component.html',
 })
 export class OverviewComponent {
     @ViewChild(AttributeDialogComponent) public attributeForm: AttributeDialogComponent;
@@ -13,7 +13,7 @@ export class OverviewComponent {
     constructor(private confirmationService: ConfirmationService) {}
 
     public userConfirms() {
-        this.messages.push({ severity: "success", summary: "yay" });
+        this.messages.push({ severity: 'success', summary: 'yay' });
     }
 
     public openAttributes() {
@@ -22,7 +22,7 @@ export class OverviewComponent {
 
     public openConfirm() {
         this.confirmationService.confirm({
-            message: "Confirm this?",
+            message: 'Confirm this?',
             accept: () => this.userConfirms(),
         });
     }
